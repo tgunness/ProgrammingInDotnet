@@ -14,34 +14,31 @@ namespace Week2.InClassDemo
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World! Please enter your name:");
-            string name = Console.ReadLine();
 
-            Console.WriteLine(name);
-            var a = 12;
-            long b = a;
-            float c = a;
-            double d = a;
-            decimal currency = a;
+            string fname = "Trishan";
+            string lname = "Gunness";
 
-            int e = Convert.ToInt32(b);
-            int f = int.Parse(name);
-            int g;
-            bool canConvert = int.TryParse(name, out g);
+            string fullname = "Mr. " + fname + " Middle Name " + lname;
 
+            string fullname2 = String.Format("Mr. {0} {1}", fname, lname);
 
-            if(int.TryParse(name, out int gg))
-            {
-                Console.WriteLine(gg);
-            }
-            Thread.Sleep(2000);
+            string fullName = $"Mr. {fname} {lname}";
+            string filePath = @"C:\test\2";
+
+            string menu = 
+$@"Console application
+1. List Stuff
+2. Edit Stuff
+3. Move Stuff
+Please select stuff {fullName}:
+";
 
 
-            decimal myMoney = 300.5m;
-            float myRadius = 3.145f;
+            Console.WriteLine(menu);
 
-            int aa = 12;
-            var bb = 12;
-            var cc = "";
+            Thread.Sleep(10000);
+
+
 
         }
     }
