@@ -73,7 +73,7 @@
     - `$"Hello {var}"` (string interpolation)
     - `@"Hello \t World"` (verbatim string)
     - `$@ Hello World from \t {var}` (verbatim string interpolation)
-    -  """ Raw String Literals (required C# 11+) 
+    -  """ Raw String Literals (required C# 11+; NET 7.0) [ref](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/raw-string)
         ```
             string jsonString = """
             {
