@@ -1,7 +1,7 @@
 # C# Language
 
 # Overview
-- C# tied to .NET versions (ref)[https://www.c-sharpcorner.com/article/c-sharp-versions/]
+- C# tied to .NET versions [ref](https://www.c-sharpcorner.com/article/c-sharp-versions/)
 - Hello World App
     - White spaces are ignored
 - `using` vs `import`
