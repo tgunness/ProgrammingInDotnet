@@ -1,7 +1,5 @@
 # C# Language
 
-Notes:
-
 # Overview
 - C# tied to .NET versions
 - Hello World App
