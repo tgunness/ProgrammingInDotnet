@@ -24,6 +24,9 @@ namespace Week2.InClassDemo
                 isActive = false
             };
 
+            Console.Write(myAccount);
+            Console.ReadLine();
+
         }
     }
 }
