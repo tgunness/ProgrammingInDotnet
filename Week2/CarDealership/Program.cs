@@ -14,6 +14,8 @@ namespace CarDealership
     {
         static void Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
+
             Dealership dealer = new Dealership(); //containing all business login inside a Dealership class increases reusablability
             SalesView salesView = new SalesView(dealer);  //putting views into classes increase expandability (ie. we can add more and more view (SalesView, MaintainanceView, etc.))
 

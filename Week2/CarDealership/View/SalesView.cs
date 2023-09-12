@@ -35,7 +35,7 @@ namespace CarDealership.View
                         DisplayShowCarsByMake("Ford");
                         break;
                     case "4":
-                        DisplayLogoutMessage();
+                        DisplayGoodbyeCar();
                         return;
                     default:
                         DisplayInvalidOption();
@@ -94,6 +94,17 @@ namespace CarDealership.View
             Console.Clear();
             Console.Write("Goodbye");
             Thread.Sleep(_sleepTimer);
+        }
+
+        private void DisplayGoodbyeCar()
+        {
+            foreach(string c in Constants.GetAsciiCars())
+            {
+                Console.Clear();
+                Console.Write(c);
+                Thread.Sleep(100);
+            }
+            Thread.Sleep(_sleepTimer);   
         }
     }
 }
