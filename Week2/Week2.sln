@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week2.InClassDemo", "Week2.InClassDemo\Week2.InClassDemo.csproj", "{6FE3B08F-4E9C-4166-B029-79A3D56A2C17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarDealership", "CarDealership\CarDealership.csproj", "{BB6B51AF-DDD1-4893-BC2A-A8964D471E8C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarDealershipConsole", "CarDealershipConsole\CarDealershipConsole.csproj", "{BB6B51AF-DDD1-4893-BC2A-A8964D471E8C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarDealershipWinForm", "CarDealershipWinForm\CarDealershipWinForm.csproj", "{F7FB9181-A6A6-44E2-9DD9-56F78D8A3602}"
 EndProject
