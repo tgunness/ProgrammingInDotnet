@@ -4,7 +4,7 @@ This exercise introduces how to:
 - create Model View in code
 - create c# console application
 - create c# window forms application
-- how to do simple file i/o
+- do simple file i/o
 
 There are accompanying recording that go along with this:
 - [Exercise 2 CarDealership - Intro and Design](https://www.dropbox.com/scl/fi/3n8p0x3euvgeojgahze1k/Exercise-2-CarDealership-Intro-and-Design.mkv?rlkey=y54baenc5scsor8mlgtd1x3w2&dl=0)
