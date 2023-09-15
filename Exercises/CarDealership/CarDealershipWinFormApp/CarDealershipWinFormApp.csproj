@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9EBFB5F7-4324-4631-AB42-4A7EB02FC917}</ProjectGuid>
+    <ProjectGuid>{4D636405-57E7-44BA-97F7-4F88BA2D5EE6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>CarDealershipWinFormApp</RootNamespace>
     <AssemblyName>CarDealershipWinFormApp</AssemblyName>
@@ -80,9 +80,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CarDealershipConsoleApp\CarDealershipConsoleApp.csproj">
-      <Project>{d468c019-d174-4365-a1a7-6d68566c1c3f}</Project>
-      <Name>CarDealershipConsoleApp</Name>
+    <ProjectReference Include="..\CarDealershipCommon\CarDealershipCommon.csproj">
+      <Project>{82059c7c-2245-4411-8c52-dd6a4186086c}</Project>
+      <Name>CarDealershipCommon</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

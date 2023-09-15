@@ -4,6 +4,7 @@ using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CarDealershipCommon;
 
 namespace CarDealershipConsoleApp
 {
@@ -36,7 +37,10 @@ Enter Option:";
                         Console.Clear();
                         foreach (Car c in dealership.GetAllCars())
                         {
-                            Console.WriteLine(c);
+                            if (c != null)
+                            {
+                                Console.WriteLine(c);
+                            }
                         }
                         Console.ReadLine();
                         break;
@@ -50,8 +54,10 @@ Enter Option:";
                         Console.Clear();
                         foreach (Car c in dealership.GetCarByMake("Ford"))
                         {
-                            
-                            Console.WriteLine(c);
+                            if (c != null)
+                            {
+                                Console.WriteLine(c);
+                            }
                         }
                         Console.ReadLine();
                         break;

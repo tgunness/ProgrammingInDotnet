@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using CarDealershipConsoleApp;
-
+using CarDealershipCommon;
 
 namespace CarDealershipWinFormApp
 {
@@ -21,35 +13,40 @@ namespace CarDealershipWinFormApp
             dealership = new Dealership();
         }
 
-        public void DisplayListAllCars(object sender, EventArgs e)
+        public void DisplayAllCars(object sender, EventArgs e)
         {
-            outputBox.Text = string.Empty;
+            outputBox.Text = "";
             foreach (Car c in dealership.GetAllCars())
             {
-                outputBox.Text += c.ToString() + "\r\n";
-            }
-        }
-
-        public void DisplayBestMileageCar(object sender, EventArgs e)
-        {
-            outputBox.Text = string.Empty;
-            Car car = dealership.GetBestMileageCar();
-            outputBox.Text = car.ToString() + "\r\n"; ;
-        }
-
-        public void DisplayCarByMake(object sender, EventArgs e)
-        {
-            outputBox.Text = string.Empty;
-            foreach (Car c in dealership.GetCarByMake("Ford"))
-            {
-                if (c != null && c.ToString() != string.Empty)
+                if (c != null)
                 {
-                    outputBox.Text += c.ToString() + "\r\n"; ;
+                    outputBox.Text += c.ToString();
+                    outputBox.Text += Environment.NewLine;
                 }
             }
         }
 
-        public void ExitApp(object sender, EventArgs e)
+        public void DisplayBestMileage(object sender, EventArgs e)
+        {
+            Car c = dealership.GetBestMileageCar();
+            outputBox.Text = "";
+            outputBox.Text += c.ToString();
+        }
+
+        public void DisplayMake(object sender, EventArgs e)
+        {
+            outputBox.Text = "";
+            foreach (Car c in dealership.GetCarByMake("Ford"))
+            {
+                if (c != null)
+                {
+                    outputBox.Text += c.ToString();
+                    outputBox.Text += Environment.NewLine;
+                }
+            }
+        }
+
+        public void Exit(object sender, EventArgs e)
         {
             Application.Exit();
         }
