@@ -1,7 +1,0 @@
-Honda,Civic,40,550
-Ford,Mustang,45,432
-VW,Golf,34,667
-Ford,Focus,39,600
-Chevrolet,Cruz,40,525
-VW,Passat,35,500
-Ford,Escape,60,800
