@@ -5,8 +5,12 @@
 - Overview
 - Architecture
 - Query Syntax
+- Exercise - Query Syntax
 - Method Syntax
+- Exercise - Method Syntax
 - Best Practices
+- Academic Records Processing Exercise
+
 ## Overview
 - LINQ stands for Language Integrated Query
 - It's a set of features in C# for querying and manipulating data
