@@ -8,11 +8,11 @@
 - Method Syntax
 - Best Practices
 ## Overview
-- LINQ stands for Language Integrated Query 
+- LINQ stands for Language Integrated Query
 - It's a set of features in C# for querying and manipulating data
 - It allows to write queries directly in code (you can even write SQL like code)
     - query = set of instructions that describe what data to retrieve from a given data source
-- LINQ operates on data sources:
+- LINQ operates on various data sources:
     - LINQ to Objects - query in-memory collections likes arrays, lists and dictionaries
     - LINQ to SQL - query and manipulate data in relational database
     - LINQ to XML - simplifies XML processing
@@ -21,8 +21,8 @@
     - Method Syntax
 
 ## Architecture
-- LINQ supports data types that inherit from IEnumerable (`T` is a placeholder for any data type; a generic)
-    -  Types that support IEnumerable<T> or a derived interface such as the generic IQueryable<T> are called _queryable types_.
+- LINQ supports the data types that inherit from IEnumerable (ie. `Array`, `List`, etc.)
+    -  Data types that support IEnumerable or a derived interface such as the generic IQueryable are called **_queryable types_**.
 - When declaring LINQ query variable, you can use the `var` keyword to instruct the compiler to infer the type of a query variable at compile time
     - This is useful when doing projections, or dynamic types
 - All LINQ query operations has three parts 
@@ -56,8 +56,9 @@
 - The query variable itself only stores the query commands. The actual execution of the query is deferred until you iterate over the query variable in a foreach statement.
 - Because the query variable itself never holds the query results, you can execute it as often as you like.
     - This becomes very relevant in LINQ to SQL where you want to query for the latest data at various stages. 
-- You can force immediate execution by specifying an extension method (ie. `.Max()`, `.Count()`, etc)
-## Query Syntax (aka Query Expression)
+- You can force immediate execution by specifying an extension method (ie. `.ToArray()`, `.ToList()`, `.Max()`, `.Count()`, etc)
+## Query Syntax
+- Query syntax are often more readable 
 - A query expression consists of a set of clauses written in a declarative syntax similar to SQL
 - Keywords used in these clauses ([ref](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/query-keywords))
     - `from` - Specifies a data source and a range variable (similar to an iteration variable).
@@ -74,12 +75,15 @@
     - `by` - Contextual keyword in a group clause.
     - `ascending` - Contextual keyword in an orderby clause.
     - `descending` - Contextual keyword in an orderby clause.
-- Query Expressions
+- A query syntax expression must begin with a `from` clause and must end with a `select` or `group` clause. 
+  
+  Between the first `from` clause and the last `select` or `group` clause, it can contain one or more of these optional clauses: `where`, `orderby`, `join`, `let` and even additional `from` clauses. 
+
     ```csharp
     // Data source.
-    int[] scores = { 90, 71, 82, 93, 75, 82 };
+    int[] scores = { 90, 71, 82, 93, 75, 82 }; //int[] is of type Array class, Array class implements IEnumerable and thus queryable
 
-    // Query Expression.
+    // Query Syntax Expression.
     IEnumerable<int> scoreQuery = //query variable
         from score in scores //required
         where score > 80 // optional
@@ -94,31 +98,94 @@
 
     // Output: 93 90 82 82
     ```
+## Method Syntax (aka Method Extension Syntax or Fluent)
+- Method Syntax vs Query Syntax
+    - At compile time, query syntax expressions are converted to method calls
+    - Any query that can be expressed by using query syntax can also be expressed by using method syntax.
+    - Some query operations, such as `Count` or `Max`, have no equivalent query expression clause and must therefore be expressed as a method call. 
+        - All query syntax expressions can be methods but not all methods can be query syntax expressions
+    - There is no semantic or performance difference between the two different forms. 
 
-## Method Syntax
+    ```csharp
+    static void Main()
+    {
+        int[] numbers = { 5, 10, 8, 3, 6, 12};
 
-- Introduction to Collections (35mins)
-    - System.Collections.Generic;
-    - List<T> (T represents type; this is the generic type; comes from System.Collections.Generic; doesn't need to be resize like Arrays)
-        - Add
-        - AddRange
-        - Capacity
-        - Clear
-        - Contains
-        - Count
-        - IndexOf
-        - Insert (element at specific index)
-        - Remove
-        - RemoveAt (element at specific index)
-        - RemoveRange
-        - Sort
-        - TrimExcess
-    - 
+        //Query syntax:
+        IEnumerable<int> numQuery1 =
+            from num in numbers
+            where num > 2
+            select num;
+
+        //Method syntax:
+        IEnumerable<int> numQuery2 = numbers.Where(num => num > 2);
+
+        foreach (int i in numQuery1)
+        {
+            Console.Write(i + " ");
+        }
+        Console.WriteLine(System.Environment.NewLine);
+        foreach (int i in numQuery2)
+        {
+            Console.Write(i + " ");
+        }
+
+        // Keep the console open in debug mode.
+        Console.WriteLine(System.Environment.NewLine);
+        Console.WriteLine("Press any key to exit");
+        Console.ReadKey();
+    }
+    ```
+- Method syntax is also called 'fluent' syntax because it flows logically and intuitively, and allows methods to be combined simply
+    - A method return can be piped to the input of next method
+        ```csharp
+        IEnumerable<int> numQuery2 = numbers.Where(num => num > 2).OrderBy(n => n);
+        ```    
+### Lambda Expressions
+- Method syntax makes use of Lambda expressions, which are anonymous functions used for inline code blocks
+- The body of the lambda is just the same as the expression in query syntax or in any other C# expression or statement
+- Express Lambda: `(input-parameters) => expression`
+    - `.Where(num => num > 2)`
+- Statement Lambda: `(input-parameters) => { <sequence-of-statements> }`    
+    - `.Where(num => { if(num) > 2 return num; })`
+    - Better use case:
+        ```csharp
+        int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+        int oddNumbers = numbers.Count(n => n % 2 == 1);
+        Console.WriteLine($"There are {oddNumbers} odd numbers in {string.Join(" ", numbers)}");
+        ```        
+- `=>` is the lambda operator, which is read as "goes to"
+- learn more on Lambda [here](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions)     
+         
+
+## Mixed query and method syntax
+In C# you can mix query and method syntax.
+```csharp
+// Using a query expression with method syntax
+int numCount1 = (
+    from num in numbers1
+    where num < 3 || num > 7
+    select num
+).Count();
+
+// Better: Create a new variable to store the method call result
+IEnumerable<int> numbersQuery =
+    from num in numbers1
+    where num < 3 || num > 7
+    select num;
+
+int numCount2 = numbersQuery.Count();
+```
+**Question**: Why is `numbersQuery` better?
+
+
+
+
+
+## Best Practices
+- "In general, the rule is to use (Query expressions) whenever possible, and use (Method expressions) and (Mixed query and method expressions) whenever necessary." [ref](https://learn.microsoft.com/en-us/dotnet/csharp/linq/write-linq-queries#composability-of-queries)
+
+## In Class Demo
+- LINQ queries vs regular coded queries
     
-
-
-
-
-
-- "The following examples demonstrate some simple LINQ queries by using each approach listed previously. In general, the rule is to use (Query syntax) whenever possible, and use (Method syntax) and (Mixed query and method syntax) whenever necessary." [ref](https://learn.microsoft.com/en-us/dotnet/csharp/linq/write-linq-queries#composability-of-queries)
 
