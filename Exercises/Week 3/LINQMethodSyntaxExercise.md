@@ -28,6 +28,9 @@ public class Program
 
 
         //TODO #4 - Console.WriteLine all students that have passed the exam (ie. Exam grade greater than 50 is a pass)
+
+
+        Console.ReadLine();
     }
 }
 
