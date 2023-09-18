@@ -102,7 +102,7 @@
     ```
 
 ## Student In Class Exercise - Query Syntax
-See exercise [here]()
+See exercise [here](https://github.com/tgunness/ProgrammingInDotnet/blob/main/Exercises/Week%203/LINQQuerySyntaxExercise.md)
 
 
 ## Method Syntax (aka Method Extension Syntax or Fluent)
@@ -184,8 +184,8 @@ int numCount2 = numbersQuery.Count();
 **Question**: Why is `numbersQuery` better?
 
 
-## Student In Class Exercise - Query Syntax
-See exercise [here]()
+## Student In Class Exercise - MEthod Syntax
+See exercise [here](https://github.com/tgunness/ProgrammingInDotnet/blob/main/Exercises/Week%203/LINQMethodSyntaxExercise.md)
 
 ## Best Practices
 - "In general, the rule is to use (Query expressions) whenever possible, and use (Method expressions) and (Mixed query and method expressions) whenever necessary." [ref](https://learn.microsoft.com/en-us/dotnet/csharp/linq/write-linq-queries#composability-of-queries)
@@ -212,7 +212,9 @@ See exercise [here]()
 
 
 # Weekly Exercise - Academic Records Processing Exercise
-See exercise [here]()
+See exercise [here](https://github.com/tgunness/ProgrammingInDotnet/blob/main/Exercises/Week%203/LINQWeeklyExercise.md)
+
+
 # Final Notes
 
 - Assignment 1 (Lab 1) - you aren't allowed to use LINQ to do the sorting algorithm, must code this yourself (can't use LINQ `order by emp descending` or `order by emp ascending`)
