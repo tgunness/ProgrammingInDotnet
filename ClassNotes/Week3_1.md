@@ -52,11 +52,13 @@
         }
         ```
         ![Alt text](linq-query-complete-operation.png)
-### Deferred Execution
+### Deferred Execution (aka Lazy Evaluation)
 - The query variable itself only stores the query commands. The actual execution of the query is deferred until you iterate over the query variable in a foreach statement.
 - Because the query variable itself never holds the query results, you can execute it as often as you like.
     - This becomes very relevant in LINQ to SQL where you want to query for the latest data at various stages. 
+### Immediate Execution (aka Eager evaluation)
 - You can force immediate execution by specifying an extension method (ie. `.ToArray()`, `.ToList()`, `.Max()`, `.Count()`, etc)
+
 ## Query Syntax
 - Query syntax are often more readable 
 - A query expression consists of a set of clauses written in a declarative syntax similar to SQL
@@ -99,13 +101,22 @@
     // Output: 93 90 82 82
     ```
 ## Method Syntax (aka Method Extension Syntax or Fluent)
+- Method Syntax uses extension methods to construct the query
+- Sample of Methods:
+    - `.Where()` - filters a sequence of values based on a predicate.
+    - `.Count()` - returns the number of elements in a sequence
+    - `.Max()` - returns the maximum value in a sequence
+    - `.Min()` - returns the minimum value in a sequence
+    - `.Sum()` - computes the sum of a sequence
+    - `.Select()` - projects each element of a sequence into a new form
+    - A full list of methods can be found [in the Enumerable Class spec](https://learn.microsoft.com/en-us/dotnet/api/system.linq.enumerable?view=netframework-4.8)
 - Method Syntax vs Query Syntax
     - At compile time, query syntax expressions are converted to method calls
     - Any query that can be expressed by using query syntax can also be expressed by using method syntax.
     - Some query operations, such as `Count` or `Max`, have no equivalent query expression clause and must therefore be expressed as a method call. 
         - All query syntax expressions can be methods but not all methods can be query syntax expressions
     - There is no semantic or performance difference between the two different forms. 
-
+- 
     ```csharp
     static void Main()
     {
@@ -179,12 +190,29 @@ int numCount2 = numbersQuery.Count();
 **Question**: Why is `numbersQuery` better?
 
 
-
-
-
 ## Best Practices
 - "In general, the rule is to use (Query expressions) whenever possible, and use (Method expressions) and (Mixed query and method expressions) whenever necessary." [ref](https://learn.microsoft.com/en-us/dotnet/csharp/linq/write-linq-queries#composability-of-queries)
+- Prefer deferred execution, as it can lead to performance improvements (we evaluate data only when its needed)
+- Use the `.Where()` clauses to filter out unnecessary data early in the query
+- If you only require certain field, use `.Select()` to project only the necessary fields, instead of returning the entire object.
+- The `.Any()` and `.All()` methods are helpful when checking for specific conditions in a collection. However, using them incorrectly can lead to performance issues. Consider the following:
+    - Use `Any()` instead of `Count()` when checking if a collection has at least one element.
+    - Use `All()` to check if all elements in a collection meet a specific condition, instead of using `Where()` and `Count()`
+- Avoid Multiple Enumerations
+    ```csharp
+    // Multiple enumerations of a LINQ query can lead to performance issues, as the query is executed multiple times
 
+    // Multiple enumerations (less efficient)
+    IEnumerable<MyClass> results = myCollection.Where(x => x.IsValid);
+    int count = results.Count(); //this evaluate the query
+    foreach (var item in results) { /* ... */ } //this also evaluate the query
+
+    // Materializing the results once (more efficient)
+    List<MyClass> results = myCollection.Where(x => x.IsValid).ToList(); //the .ToList() evaluate query once
+    int count = results.Count; //we don't eval query, just work with data at list
+    foreach (var item in results) { /* ... */ }
+    
+    ```
 ## In Class Demo
 - LINQ queries vs regular coded queries
     
