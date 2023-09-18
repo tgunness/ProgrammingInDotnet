@@ -3,6 +3,9 @@
 Given the below code, please complete all `//TODO` items **using LINQ query syntax**
 
 ```csharp
+using System;
+using System.Linq;
+
 public class Program
 {
     static void Main(string[] args)
