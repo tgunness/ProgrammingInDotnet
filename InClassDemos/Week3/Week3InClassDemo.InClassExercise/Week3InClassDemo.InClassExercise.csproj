@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{855A17C9-5FC5-432A-B592-71CA67515923}</ProjectGuid>
+    <ProjectGuid>{02CFC9AD-29FA-43E2-98D9-822B2E7C7522}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Week3InClassDemo</RootNamespace>
-    <AssemblyName>Week3InClassDemo</AssemblyName>
+    <RootNamespace>Week3InClassDemo.InClassExercise</RootNamespace>
+    <AssemblyName>Week3InClassDemo.InClassExercise</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,12 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Week3InClassDemo.Common\Week3InClassDemo.Common.csproj">
-      <Project>{63798CAF-059E-4318-8D3C-79B30C4CB770}</Project>
-      <Name>Week3InClassDemo.Common</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

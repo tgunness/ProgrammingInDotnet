@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Week3InClassDemo.Common;
 
 namespace Week3InClassDemo.NoLinq
 {
@@ -26,30 +27,12 @@ namespace Week3InClassDemo.NoLinq
                     greaterThanFive[count] = data[i];
             }
 
-            //Less Than
-            int[] lessThanFive = new int[10];
-            count = 0;
-
-            for (int i = 0; i < data.Length; i++)
-            {
-                if (data[i] < 5)
-                    lessThanFive[count] = data[i];
-            }
-
             //Highest
             int highestValue = 0;
             for(int i = 0; i<data.Length; i++)
             {
                 if (data[i] > highestValue)
                     highestValue = data[i];
-            }
-
-            //Lowest
-            int lowestValue = 10;
-            for (int i = 0; i < data.Length; i++)
-            {
-                if (data[i] < lowestValue)
-                    lowestValue = data[i];
             }
 
             //Sorted Ascending
@@ -68,40 +51,24 @@ namespace Week3InClassDemo.NoLinq
                 }
             }
 
-            //Sorted Descending
-            int[] sortedDescending = data;
-            temp = 0;
-            for (int i = 0; i <= sortedDescending.Length - 1; i++)
+
+
+            //Objects - Get by name
+            Student[] students = new Classroom().Students;
+            Student[] results = new Student[students.Length];
+            count = 0;
+            foreach(Student student in students)
             {
-                for (int j = i + 1; j < sortedDescending.Length; j++)
+                if(student.FirstName.StartsWith("J"))
                 {
-                    if (sortedDescending[i] < sortedDescending[j])
-                    {
-                        temp = sortedDescending[i];
-                        sortedDescending[i] = sortedDescending[j];
-                        sortedDescending[j] = temp;
-                    }
+                    results[count] = student;
+                    count++;
                 }
             }
 
-            //Objects - Get by name
-            Person[] persons = new Person[]
+            foreach(Student student in results)
             {
-                new Person(1, "john doe", "55 acme road"),
-                new Person(2, "jason borne", "40 b road"),
-                new Person(50, "jane parker", "20 a road")
-            };
-
-
-            Person[] persons2 = new Person[3];
-            count = 0;
-            foreach(Person p in persons2)
-            {
-                if(p.Name.Contains("john"))
-                {
-                    persons2[count] = p;
-                    count++;
-                }
+                Console.WriteLine(student);
             }
 
 

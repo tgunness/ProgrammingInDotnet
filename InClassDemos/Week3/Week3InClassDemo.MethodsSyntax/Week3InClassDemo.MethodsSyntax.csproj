@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{855A17C9-5FC5-432A-B592-71CA67515923}</ProjectGuid>
+    <ProjectGuid>{E6DCD854-14F9-4E80-90E1-6E81A1FD4A65}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Week3InClassDemo</RootNamespace>
-    <AssemblyName>Week3InClassDemo</AssemblyName>
+    <RootNamespace>Week3InClassDemo.MethodsSyntax</RootNamespace>
+    <AssemblyName>Week3InClassDemo.MethodsSyntax</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

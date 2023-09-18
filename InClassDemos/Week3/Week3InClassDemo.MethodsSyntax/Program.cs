@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Week3InClassDemo.Common;
 
-namespace Week3InClassDemo.QueryExpressions
+namespace Week3InClassDemo.MethodsSyntax
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             Architecture();
-            //QuerySyntax();
+            MethodSyntax();
             //Examples();
         }
 
@@ -25,10 +25,7 @@ namespace Week3InClassDemo.QueryExpressions
 
             // 2. Query creation.
             // numQuery is an IEnumerable<int>
-            var numQuery =
-                from num in numbers
-                where (num % 2) == 0
-                select num;
+            var numQuery = numbers.Where(num => num % 2 == 0);
 
             // 3. Query execution.
             foreach (int num in numQuery)
@@ -39,21 +36,15 @@ namespace Week3InClassDemo.QueryExpressions
 
         #endregion
 
-        #region QuerySyntax
-        static void QuerySyntax()
+        #region MethodSyntax
+        static void MethodSyntax()
         {
             // Data source.
-            int[] scores = { 90, 71, 82, 93, 75, 82 }; //int[] is of type Array class, Array class implements IEnumerable and thus queryable
+            int[] datasource = { 90, 71, 82, 93, 75, 82 }; //int[] is of type Array class, Array class implements IEnumerable and thus queryable
 
-            // Query Syntax Expression.
-            IEnumerable<int> scoreQuery = //query variable
-                from score in scores //required
-                                     // insert optional clauses here 
-                                     // insert optional clauses here 
-                                     // insert optional clauses here 
-                select score; //required, must end with select or group
+            //Method Syntax Expression.
 
-
+            IEnumerable<int> scoreQuery = datasource.Where(num => num > 2).Select(num => num);
 
             // Execute the query to produce the results
             foreach (int testScore in scoreQuery)
