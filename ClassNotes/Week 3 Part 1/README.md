@@ -25,6 +25,7 @@
     - Method Syntax
 
 # Architecture
+## Background
 - LINQ supports the data types that inherit from IEnumerable (ie. `Array`, `List`, etc.)
     -  Data types that support IEnumerable or a derived interface such as the generic IQueryable are called **_queryable types_**.
 - When declaring LINQ query variable, you can use the `var` keyword to instruct the compiler to infer the type of a query variable at compile time
