@@ -100,6 +100,11 @@
 
     // Output: 93 90 82 82
     ```
+
+## Student In Class Exercise - Query Syntax
+See exercise [here]()
+
+
 ## Method Syntax (aka Method Extension Syntax or Fluent)
 - Method Syntax uses extension methods to construct the query
 - Sample of Methods:
@@ -122,20 +127,9 @@
     {
         int[] numbers = { 5, 10, 8, 3, 6, 12};
 
-        //Query syntax:
-        IEnumerable<int> numQuery1 =
-            from num in numbers
-            where num > 2
-            select num;
-
         //Method syntax:
         IEnumerable<int> numQuery2 = numbers.Where(num => num > 2);
 
-        foreach (int i in numQuery1)
-        {
-            Console.Write(i + " ");
-        }
-        Console.WriteLine(System.Environment.NewLine);
         foreach (int i in numQuery2)
         {
             Console.Write(i + " ");
@@ -153,18 +147,18 @@
         IEnumerable<int> numQuery2 = numbers.Where(num => num > 2).OrderBy(n => n);
         ```    
 ### Lambda Expressions
-- Method syntax makes use of Lambda expressions, which are anonymous functions used for inline code blocks
+- Lambda expressions is another core concept in C#, which are anonymous functions used for inline code blocks
+- Method syntax makes use of Lambda expressions
 - The body of the lambda is just the same as the expression in query syntax or in any other C# expression or statement
 - Express Lambda: `(input-parameters) => expression`
     - `.Where(num => num > 2)`
 - Statement Lambda: `(input-parameters) => { <sequence-of-statements> }`    
-    - `.Where(num => { if(num) > 2 return num; })`
-    - Better use case:
-        ```csharp
-        int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
-        int oddNumbers = numbers.Count(n => n % 2 == 1);
-        Console.WriteLine($"There are {oddNumbers} odd numbers in {string.Join(" ", numbers)}");
-        ```        
+    ```csharp
+    .Where(num => { 
+        if(num > 2) return num;
+      })`  
+    ``` 
+    
 - `=>` is the lambda operator, which is read as "goes to"
 - learn more on Lambda [here](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions)     
          
@@ -190,14 +184,16 @@ int numCount2 = numbersQuery.Count();
 **Question**: Why is `numbersQuery` better?
 
 
+## Student In Class Exercise - Query Syntax
+See exercise [here]()
+
 ## Best Practices
 - "In general, the rule is to use (Query expressions) whenever possible, and use (Method expressions) and (Mixed query and method expressions) whenever necessary." [ref](https://learn.microsoft.com/en-us/dotnet/csharp/linq/write-linq-queries#composability-of-queries)
-- Prefer deferred execution, as it can lead to performance improvements (we evaluate data only when its needed)
+- Prefer deferred execution, as it can lead to performance improvements (you would evaluate data only when its needed)
 - Use the `.Where()` clauses to filter out unnecessary data early in the query
 - If you only require certain field, use `.Select()` to project only the necessary fields, instead of returning the entire object.
-- The `.Any()` and `.All()` methods are helpful when checking for specific conditions in a collection. However, using them incorrectly can lead to performance issues. Consider the following:
-    - Use `Any()` instead of `Count()` when checking if a collection has at least one element.
-    - Use `All()` to check if all elements in a collection meet a specific condition, instead of using `Where()` and `Count()`
+- Use `Any()` instead of `Count()` when checking if a collection has at least one element.
+- Use `All()` to check if all elements in a collection meet a specific condition, instead of using `Where()` and `Count()`
 - Avoid Multiple Enumerations
     ```csharp
     // Multiple enumerations of a LINQ query can lead to performance issues, as the query is executed multiple times
@@ -213,90 +209,11 @@ int numCount2 = numbersQuery.Count();
     foreach (var item in results) { /* ... */ }
     
     ```
-## In Class Exercise
-Given the below code, please complete all `//TODO` items
-
-```csharp
-public class Program
-{
-    static void Main(string[] args)
-    {
-        //Data Sources
-        int[] numbers = new int[] { 2, 1, 3, 5, 4, 6, 8, 9, 7, 10 };
-        Student[] students = new Classroom().Students;
-
-        //TODO #1 - Console.WriteLine all numbers less than five
 
 
-        //TODO #2 - Console.WriteLine the highest value in numbers
-
-
-        //TODO #3 - Console.WriteLine all numbers, sorted largest to smallest (ie. 10, 9, 8, 7, etc.)
-
-
-        //TODO #4 - Console.WriteLine all students that have passed the exam (ie. Exam grade greater than 50 is a pass)
-    }
-}
-
-
-
-public class Classroom
-{
-    public Student[] Students { get; set; }
-
-    public Classroom()
-    {
-        Students = new Student[] {
-                new Student(1, "Alice", "Johnson", 85),
-                new Student(2, "Bob", "Smith", 92),
-                new Student(3, "Charlie", "Brown", 78),
-                new Student(4, "David", "Wilson", 88),
-                new Student(5, "Eve", "Anderson", 95),
-                new Student(6, "Frank", "Davis", 45),
-                new Student(7, "Grace", "Lee", 76),
-                new Student(8, "Henry", "Martinez", 91),
-                new Student(9, "Isabella", "Taylor", 82),
-                new Student(10, "Jack", "Rodriguez", 87),
-                new Student(11, "Kate", "White", 93),
-                new Student(12, "Liam", "Garcia", 84),
-                new Student(13, "Mia", "Hernandez", 35),
-                new Student(14, "Noah", "Lopez", 90),
-                new Student(15, "Olivia", "Adams", 77),
-                new Student(16, "Owen", "Clark", 94),
-                new Student(17, "Sophia", "Turner", 81),
-                new Student(18, "Thomas", "Scott", 86),
-                new Student(19, "Victoria", "Walker", 75),
-                new Student(20, "William", "Baker", 97),
-            };
-    }
-}
-
-public class Student
-{
-    public Student(int studentId, string firstName, string lastName, int grade)
-    {
-        StudentId = studentId;
-        FirstName = firstName;
-        LastName = lastName;
-        ExamGrade = grade;
-    }
-
-    public int StudentId { get; set; }
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public int ExamGrade { get; set; }
-
-    public override string ToString()
-    {
-        return $"Student->ID:{StudentId},FName:{FirstName},LName:{LastName},ExamGrade:{ExamGrade}";
-    }
-}
-
-
-
-```
-
-# Notes
+# Weekly Exercise - Academic Records Processing Exercise
+See exercise [here]()
+# Final Notes
 
 - Assignment 1 (Lab 1) - you aren't allowed to use LINQ to do the sorting algorithm, must code this yourself (can't use LINQ `order by emp descending` or `order by emp ascending`)
 
