@@ -11,6 +11,13 @@ public class Program
         int[] numbers = new int[] { 2, 1, 3, 5, 4, 6, 8, 9, 7, 10 };
         Student[] students = new Classroom().Students;
 
+        //Example - numbers greaterThanFive?
+        var greaterThanFive = numbers.Where(a => a > 5);
+
+        foreach(var num in greaterThanFive)
+        {
+            Console.WriteLine(num);
+        }
         //TODO #1 - Console.WriteLine all numbers less than five
 
 
