@@ -1,0 +1,17 @@
+- Introduction to Collections 
+    - System.Collections.Generic;
+    - List<T> (T represents type; this is the generic type; comes from System.Collections.Generic; doesn't need to be resize like Arrays)
+        - Add
+        - AddRange
+        - Capacity
+        - Clear
+        - Contains
+        - Count
+        - IndexOf
+        - Insert (element at specific index)
+        - Remove
+        - RemoveAt (element at specific index)
+        - RemoveRange
+        - Sort
+        - TrimExcess
+    - 
