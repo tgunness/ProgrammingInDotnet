@@ -295,5 +295,11 @@ public class Student
 
 
 ```
+
+# Notes
+
+- Assignment 1 (Lab 1) - you aren't allowed to use LINQ to do the sorting algorithm, must code this yourself (can't use LINQ `order by emp descending` or `order by emp ascending`)
+
+- **Assignment 1 (Lab 1) due Sunday Sept 24th 2023 11:59pm**
     
 
