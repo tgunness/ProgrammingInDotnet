@@ -1,7 +1,7 @@
 # Week 3 - LINQ and List Collection
 
 # Week 3 Part 1 - Introduction to LINQ
-## Agenda
+# Agenda
 - Overview
 - Architecture
 - Query Syntax
@@ -11,7 +11,7 @@
 - Best Practices
 - Academic Records Processing Exercise
 
-## Overview
+# Overview
 - LINQ stands for Language Integrated Query
 - It's a set of features in C# for querying and manipulating data
 - It allows to write queries directly in code (you can even write SQL like code)
@@ -24,7 +24,7 @@
     - Query Syntax
     - Method Syntax
 
-## Architecture
+# Architecture
 - LINQ supports the data types that inherit from IEnumerable (ie. `Array`, `List`, etc.)
     -  Data types that support IEnumerable or a derived interface such as the generic IQueryable are called **_queryable types_**.
 - When declaring LINQ query variable, you can use the `var` keyword to instruct the compiler to infer the type of a query variable at compile time
@@ -56,14 +56,14 @@
         }
         ```
         ![Alt text](linq-query-complete-operation.png)
-### Deferred Execution (aka Lazy Evaluation)
+## Deferred Execution (aka Lazy Evaluation)
 - The query variable itself only stores the query commands. The actual execution of the query is deferred until you iterate over the query variable in a foreach statement.
 - Because the query variable itself never holds the query results, you can execute it as often as you like.
     - This becomes very relevant in LINQ to SQL where you want to query for the latest data at various stages. 
-### Immediate Execution (aka Eager evaluation)
+## Immediate Execution (aka Eager evaluation)
 - You can force immediate execution by specifying an extension method (ie. `.ToArray()`, `.ToList()`, `.Max()`, `.Count()`, etc)
 
-## Query Syntax
+# Query Syntax
 - Query syntax are often more readable 
 - A query expression consists of a set of clauses written in a declarative syntax similar to SQL
 - Keywords used in these clauses ([ref](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/query-keywords))
@@ -105,11 +105,11 @@
     // Output: 93 90 82 82
     ```
 
-## Student In Class Exercise - Query Syntax
+# Student In Class Exercise - Query Syntax
 See exercise [here](https://github.com/tgunness/ProgrammingInDotnet/blob/main/Exercises/Week%203/LINQQuerySyntaxExercise.md)
 
 
-## Method Syntax (aka Method Extension Syntax or Fluent)
+# Method Syntax (aka Method Extension Syntax or Fluent)
 - Method Syntax uses extension methods to construct the query
 - Sample of Methods:
     - `.Where()` - filters a sequence of values based on a predicate.
@@ -150,7 +150,7 @@ See exercise [here](https://github.com/tgunness/ProgrammingInDotnet/blob/main/Ex
         ```csharp
         IEnumerable<int> numQuery2 = numbers.Where(num => num > 2).OrderBy(n => n);
         ```    
-### Lambda Expressions
+## Lambda Expressions
 - Lambda expressions is another core concept in C#, which are anonymous functions used for inline code blocks
 - Method syntax makes use of Lambda expressions
 - The body of the lambda is just the same as the expression in query syntax or in any other C# expression or statement
@@ -167,7 +167,7 @@ See exercise [here](https://github.com/tgunness/ProgrammingInDotnet/blob/main/Ex
 - learn more on Lambda [here](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions)     
          
 
-## Mixed query and method syntax
+# Mixed query and method syntax
 In C# you can mix query and method syntax.
 ```csharp
 // Using a query expression with method syntax
@@ -188,10 +188,10 @@ int numCount2 = numbersQuery.Count();
 **Question**: Why is `numbersQuery` better?
 
 
-## Student In Class Exercise - MEthod Syntax
+# Student In Class Exercise - MEthod Syntax
 See exercise [here](https://github.com/tgunness/ProgrammingInDotnet/blob/main/Exercises/Week%203/LINQMethodSyntaxExercise.md)
 
-## Best Practices
+# Best Practices
 - "In general, the rule is to use (Query expressions) whenever possible, and use (Method expressions) and (Mixed query and method expressions) whenever necessary." [ref](https://learn.microsoft.com/en-us/dotnet/csharp/linq/write-linq-queries#composability-of-queries)
 - Prefer deferred execution, as it can lead to performance improvements (you would evaluate data only when its needed)
 - Use the `.Where()` clauses to filter out unnecessary data early in the query
