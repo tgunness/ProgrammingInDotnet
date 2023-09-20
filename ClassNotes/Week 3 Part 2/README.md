@@ -64,12 +64,12 @@
     b.Add("acme");
     a.Remove("acme"); 
     ```
-- Get number of elements in `List<T>` use `.Count()`
+- Get number of elements in `List<T>` use `.Count`
     ```csharp
     List<int> a = new List<int>();
     a.Add(1);
     a.Add(2);
-    int numberOfElements = a.Count();
+    int numberOfElements = a.Count;
     ```
 - Check if `List<T>` contains an element value use `.Contains()`
     ```csharp
