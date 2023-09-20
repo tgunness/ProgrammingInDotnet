@@ -11,9 +11,10 @@ namespace Week3InClassDemo.QueryExpressions
     {
         static void Main(string[] args)
         {
-            Architecture();
+            //Architecture();
             //QuerySyntax();
             //Examples();
+            Example.Examples();
         }
 
         #region Architecture
@@ -26,9 +27,9 @@ namespace Week3InClassDemo.QueryExpressions
             // 2. Query creation.
             // numQuery is an IEnumerable<int>
             var numQuery =
-                from num in numbers
+                (from num in numbers
                 where (num % 2) == 0
-                select num;
+                select num);
 
             // 3. Query execution.
             foreach (int num in numQuery)
@@ -46,17 +47,16 @@ namespace Week3InClassDemo.QueryExpressions
             int[] scores = { 90, 71, 82, 93, 75, 82 }; //int[] is of type Array class, Array class implements IEnumerable and thus queryable
 
             // Query Syntax Expression.
-            IEnumerable<int> scoreQuery = //query variable
+            var scoreQuery = //query variable
                 from score in scores //required
-                                     // insert optional clauses here 
-                                     // insert optional clauses here 
-                                     // insert optional clauses here 
+                where score > 80       // insert optional clauses here 
+                orderby score descending
                 select score; //required, must end with select or group
 
 
 
             // Execute the query to produce the results
-            foreach (int testScore in scoreQuery)
+            foreach (var testScore in scoreQuery)
             {
                 Console.WriteLine(testScore);
             }
@@ -66,20 +66,7 @@ namespace Week3InClassDemo.QueryExpressions
         #region Examples
         public static void Examples()
         {
-            //Data Sources
-            int[] numbers = new int[] { 2, 1, 3, 5, 4, 6, 8, 9, 7, 10 };
-            Student[] students = new Classroom().Students;
-
-            //Code - numbers greaterThanFive?
-
-
-            //Code - numbers sortedAscending
-
-
-            //Code - student firstname starting with J
-
-
-            //Code - max int in numbers
+            
         }
 
         #endregion

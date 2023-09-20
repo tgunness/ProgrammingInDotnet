@@ -11,8 +11,8 @@ namespace Week3InClassDemo.MethodsSyntax
     {
         static void Main(string[] args)
         {
-            Architecture();
-            MethodSyntax();
+            //Architecture();
+            //MethodSyntax();
             //Examples();
         }
 
@@ -61,16 +61,52 @@ namespace Week3InClassDemo.MethodsSyntax
             int[] numbers = new int[] { 2, 1, 3, 5, 4, 6, 8, 9, 7, 10 };
             Student[] students = new Classroom().Students;
 
-            //Code - numbers greaterThanFive?
+            //Example - numbers greaterThanFive?
+            var greaterThanFive = numbers.Where(a => a > 5);
 
+            foreach(var num in greaterThanFive)
+            {
+                Console.WriteLine(num);
+            }
 
             //Code - numbers sortedAscending
+            var sorted = numbers.OrderBy(num => num);
 
+            foreach(var s in sorted)
+            {
+                Console.WriteLine(s);
+            }
 
             //Code - student firstname starting with J
+            var jStudents = students.Where(a => a.FirstName.StartsWith("J"));
 
+            foreach(var jStudent in jStudents)
+            {
+                Console.WriteLine(jStudent);
+            }
 
             //Code - max int in numbers
+
+            var maxNum = numbers.Max();
+
+            Console.WriteLine(maxNum);
+
+
+
+
+            //Projections
+
+            var FnameLNameProjection =
+                from student in students
+                where student.FirstName.StartsWith("J")
+                select student;
+
+            foreach(var s in FnameLNameProjection)
+            {
+                Console.WriteLine(s);
+            }
+            Console.ReadLine();
+
         }
 
         #endregion
