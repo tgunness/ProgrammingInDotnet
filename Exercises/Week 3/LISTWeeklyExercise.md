@@ -1,6 +1,6 @@
 # `List<T>` Weekly Exercise
 
-Given the below code please complete the code of `GetUniqueElements` method
+Given the below code please added the required `using ` libraries and complete the code of the `GetUniqueElements` method.
 
 
 ```csharp
