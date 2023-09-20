@@ -2,6 +2,7 @@
 
 Given the below code please added the required `using ` libraries and complete the code of the `GetUniqueElements` method.
 
+Please refer to the C# List<T> Collection spec [here](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-7.0#methods)
 
 ```csharp
 //TODO: add all required using statements
