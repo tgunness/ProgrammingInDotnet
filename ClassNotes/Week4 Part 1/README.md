@@ -69,7 +69,7 @@ marp: true
 
 ---
 # Case Study
-Old MacDonald Apple Farm Inc. has reached out to your software development agency to their software development needs. 
+Old MacDonald Apple Farm Inc. has reached out to your software development agency for their software development needs. 
 
 At their business, they have workers that picks Apples from their orchard farm, places the Apples into Boxes, then loads those Boxes into Trucks which make deliveries across Ontario Canada.
 
@@ -77,6 +77,7 @@ They have employed you to develop an application that can:
 - Record the number of Apples that gets picked
 - Output the number of Boxes required
 - Output the number of Trucks required
+
 
 Your company's first step in development is modeling. 
 
