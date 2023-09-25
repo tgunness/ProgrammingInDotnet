@@ -161,10 +161,20 @@ Tasks:
 - With Access Modifiers we can encapsulate or restrict access to various components of an Object
 
 # Next Class
-- Deeper look at Object and Classes (extending the utility of a Class)
+- Deeper look at Object and Classes
+- Destruction of Objects
+- Inheritance
 
 
+---
+# Reminder
 
+- **Lab Assignment 1 Due October 1st**
+  - If you'd like a code review (feedback), please email me
+
+---
+
+# END
 
 
 
