@@ -1,5 +1,11 @@
 ---
 marp: true
+<style>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+</style>
 ---
 
 # [Programming in .NET](https://tgunness.github.io/ProgrammingInDotnet/Week4Part1.html) 
@@ -11,7 +17,14 @@ marp: true
 - Week 3 - Introduced Lists and LINQ
 - ***Week 4 & 5 - Fundamentals of OOP***
 ---
-# Today - Fundamentals of OOP - Classes and Objects
+
+![bg center:80% 90%](<Blank 2 Grids Collage.png>) 
+![bg center:800% 90%](Nest-Features.jpg)
+
+---
+# Today - Classes and Objects
+
+By the end of this module you will be able to breakdown real world entities into Classes and Objects
 
 ---
 # Procedural Programming
@@ -68,20 +81,88 @@ marp: true
 ![UML Diagram](image-1.png)
 
 ---
-# Case Study
-Old MacDonald Apple Farm Inc. has reached out to your software development agency for their software development needs. 
+# [Exercise]() - Case Study
+Old MacDonald Farm Inc. has reached out to your software development agency for their software development needs. 
 
-At their business, they have workers that picks Apples from their orchard farm, places the Apples into Boxes, then loads those Boxes into Trucks which make deliveries across Ontario Canada.
+**"At Old MacDonald Farm Inc., they have workers that picks Apples from their orchard Farm, places these Apples into Boxes, then loads those Boxes into Trucks which make deliveries across Canada."**
 
-They have employed you to develop an application that can:
-- Record the number of Apples that gets picked
-- Output the number of Boxes required
-- Output the number of Trucks required
+_Your first order of business is modeling their workflow._
 
+Tasks:
 
-Your company's first step in development is modeling. 
+1. Identify the real world objects within their workflow.
+2. create UML Class Diagrams for the objects
 
-**Please create UML Class Diagrams for the main objects within this application.**
+---
+# How to code Classes (C#)
+```csharp 
+public class Apple //<--Class Name
+{
+  public Apple() //<--Constructor
+  {
+    Color = "Red";  
+  }
+
+  public string Color { get; set; } //<--Instance Property
+  public int Radius { get; set; } //<--Instance Property
+  
+  private int volume; //<--Instance Variable
+
+  public int CalculateVolume() //<--Instance Method
+  {
+    volume =  4/3 * Math.PI * Radius * Radius * Radius;
+  }
+}
+```
+---
+# Instance Variable, Instance Methods and Constructors
+
+- **Instance Variables (Properties)** - they are the attributes or state of the Object
+- **Instance Methods** - they are the functionality of the Object
+- **Constructors** - they blueprint how to create the Object
+---
+# Access Modifiers (C#)
+- Adds a level of protection by allowing the developer to tailor what data gets exposed and where. This is unknown as **Encapsulation**
+- Within C# you have `public`, `private`, `protected internal`, `protected`, `internal`, `private protected`
+![Alt text](image.png)
+- `public` and `private` are the most commonly used 
+
+   ```csharp 
+  public string a { get; set; }
+  private string b;
+  ```
+---
+# Instantiating Objects
+
+- To make an actual instance of a Class (aka "creating an Object"), it must be declared and memory allocated
+
+```csharp
+
+Apple a; //<--Declares 'a' as instance of Apple
+a = new Apple();//<--'new' allocates memory for 'a'
+
+Apple a = new Apple(); //<--Declares and allocates
+```
+---
+# [Exercise]() - Case Study - cont.
+
+_Now that we have complete modeling the workflow. We now need to create Class for all our real world objects._
+
+Tasks:
+
+1. Create a Class for each real world object that you've modeled previously (one per UML Class Diagram)
+
+---
+# Conclusion 
+
+- OOP is based on objects
+- An Object are metaphors for real-world objects or entities
+- A Class is simply a blueprint of objects, that contains State (variables), Behavior (methods) and Constructor(s)
+- With Access Modifiers we can encapsulate or restrict access to various components of an Object
+
+# Next Class
+- Deeper look at Object and Classes (extending the utility of a Class)
+
 
 
 
