@@ -11,7 +11,7 @@ marp: true
 - Week 3 - Introduced Lists and LINQ
 - ***Week 4 & 5 - Fundamentals of OOP***
 ---
-# Today - Classes and Objects: Review
+# Today - Fundamentals of OOP - Classes and Objects
 
 ---
 # Procedural Programming
@@ -49,14 +49,40 @@ marp: true
 ---
 
 # What are Objects?
-
-- Objects in a program are metaphors for real-world objects or entities (ie. Pen)
+- Objects in a program are metaphors for real-world objects or entities (ie. Pen, Apple, etc.)
 - Objects contains:
-  - State - attributes of the object
-  - Behavior - functionality or actions
+  - State - these are attributes of the object
+  - Behavior - these are functionality or actions
 - The process of creating objects is called **modeling**
 ---
 # What is a Class?
+- A Class is a blueprint of objects
+- Whenever you create an Instance of a Class, you get an Object
+- Class contains:
+  - Instance Variables (Property) - attributes of the object
+  - Instance Methods - functionality of the object
+  - Constructors - outlines how to construct the object
+---
+# How to diagram Classes (UML Class Diagram)
+
+![UML Diagram](image-1.png)
+
 ---
 # Case Study
----
+Old MacDonald Apple Farm Inc. has reached out to your software development agency to their software development needs. 
+
+At their business, they have workers that picks Apples from their orchard farm, places the Apples into Boxes, then loads those Boxes into Trucks which make deliveries across Ontario Canada.
+
+They have employed you to develop an application that can:
+- Record the number of Apples that gets picked
+- Output the number of Boxes required
+- Output the number of Trucks required
+
+Your company's first step in development is modeling. 
+
+**Please create UML Class Diagrams for the main objects within this application.**
+
+
+
+
+
