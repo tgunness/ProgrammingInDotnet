@@ -68,11 +68,11 @@ public class Apple //<--Class Name
 ### Deeper Look at Objects & Classes
 - Destruction of Classes (Finalizer and Dispose)
 - Object initializers
-- Object browser
 - Overloaded Constructors
 - Overloaded Methods
 - `readonly` Instance Variables
 - Extension Methods
+- Object browser
 
 ### Relationships between Objects & Classes
 - Inheritance
@@ -232,14 +232,14 @@ int i = s.WordCount();
 
 - Destruction of Classes (Finalizer and Dispose)
 - Object initializers
-- Object browser
 - Overloaded Constructors
 - Overloaded Methods
 - `readonly` Instance Variables
 - Extension Methods
+- Object browser
 
-Next Class: Object Relationships
----
+Next Class: 
+**- Object Relationships**
 
 ---
 # More Information
