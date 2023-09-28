@@ -16,3 +16,6 @@ Create a Dog Class.
 - In Program.cs, initialize 10 Dogs using the Object Initializer, then call you various Extensions
 
 Some potential Dog names: Charlie  Buddy Bailey Bella Bear Max Cooper Coco Duke Milo Molly Lucy Leo Jack Rocky Ace Teddy Finn Stella Sadie Scout Bruno
+
+
+Prof's Solution: https://github.com/tgunness/ProgrammingInDotnet/tree/main/InClassDemos/Week4/Week4InClassDemo.DogExercise
