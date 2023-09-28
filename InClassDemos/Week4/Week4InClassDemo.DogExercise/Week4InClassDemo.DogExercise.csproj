@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C79A1C60-0B51-42AE-A002-8E2DDC262F43}</ProjectGuid>
+    <ProjectGuid>{F8B7FCE3-A408-4198-8C59-E6E273FB3763}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Week4InClassDemo.Finalizer</RootNamespace>
-    <AssemblyName>Week4InClassDemo.Finalizer</AssemblyName>
+    <RootNamespace>Week4InClassDemo.DogExercise</RootNamespace>
+    <AssemblyName>Week4InClassDemo.DogExercise</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyExtensions.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="Dog.cs" />
+    <Compile Include="DogExtensions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

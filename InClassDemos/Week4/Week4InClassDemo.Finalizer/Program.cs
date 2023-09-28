@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Week4InClassDemo.Finalizer;
 
 namespace Week4InClassDemo.Finalizer
 {
@@ -10,20 +8,18 @@ namespace Week4InClassDemo.Finalizer
     {
         public static void Main(string[] args)
         {
-            Car car1 = new Car("Ford", "car1");
-            Car car2 = new Car("Ford", "car2");
-            Car car3 = new Car("Ford", "car3");
-            DoStuff();
-            Dealership dealer = new Dealership();
+            string test = "this is a, test";
 
-            Console.WriteLine("Done");
+            int wordCount = test.WordCount();
 
-            #region using
-            //using(var dealer2 = new Dealership())
-            //{
-            //    Console.WriteLine();
-            //}
-            #endregion
+            Console.WriteLine(wordCount);
+
+            Person p = new Person(10);
+            Console.WriteLine(p.AgeMultipler(30));
+
+
+            Console.ReadLine();
+
         }
 
         public static void DoStuff()
@@ -36,24 +32,25 @@ namespace Week4InClassDemo.Finalizer
 
     public class Car : IDisposable
     {
+        public string Make { get; set; } 
         private readonly string make;
+
         private readonly string model;
         private readonly string vinNumber;
+        public Car() { }
         public Car(string make, string model)
         {
             this.make = make;
             this.model = model;
-            this.vinNumber = Guid.NewGuid().ToString();
-
-            Console.WriteLine($"{model} - Hypothetically I've opened my file");
+            this.vinNumber = Guid.NewGuid().ToString();           
         }
 
-        ~Car()
+        ~Car() //finalizer
         {
             Dispose();
         }
 
-        public void Dispose()
+        public void Dispose() //IDisposable
         {
             Console.WriteLine($"{model} - Hypothetically I've closed my file");
         }
