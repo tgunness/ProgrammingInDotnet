@@ -1,3 +1,13 @@
+---
+marp: true
+<style>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+</style>
+---
+
 # Week 2 Part 1
 
 # C# Language

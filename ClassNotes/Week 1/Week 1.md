@@ -1,3 +1,13 @@
+---
+marp: true
+<style>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+</style>
+---
+
 # Introduction to .NET and C#
 
 ## What is .NET

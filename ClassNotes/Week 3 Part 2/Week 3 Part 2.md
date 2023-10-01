@@ -1,3 +1,13 @@
+---
+marp: true
+<style>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+</style>
+---
+
 # Week 3 - LINQ and List Collection
 
 # RECAP - Week 3 Part 1 - Introduction to LINQ
