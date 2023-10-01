@@ -8,7 +8,7 @@ img[alt~="center"] {
 </style>
 ---
 
-# [Programming in .NET](https://tgunness.github.io/ProgrammingInDotnet/Week4Part1.html) 
+# Programming in .NET
 #### by Prof. Trishan Gunness 
 ---
 # Recap:
