@@ -20,7 +20,7 @@ Let's embark on this journey together and unlock the full potential of your soft
 
 - [ClassNotes](https://github.com/tgunness/ProgrammingInDotnet/tree/main/ClassNotes) - this folder contains professor notes used throughout lectures
 - [Exercises](https://github.com/tgunness/ProgrammingInDotnet/tree/main/Exercises) - this folder contains completed exercises by myself
-- [InClassDemo](https://github.com/tgunness/ProgrammingInDotnet/tree/main/InClassDemo) - this folder contains code that was coded in class (given pace of class, code within this folder could be unstable)
+- [InClassDemos](https://github.com/tgunness/ProgrammingInDotnet/tree/main/InClassDemos) - this folder contains code that was coded in class (given pace of class, code within this folder could be unstable)
 - [RecordedSessions](https://github.com/tgunness/ProgrammingInDotnet/tree/main/RecordedSessions) - this folder contains hyperlinks to all recorded class sessions
 - [docs](https://github.com/tgunness/ProgrammingInDotnet/tree/main/docs) - this folder contains all presentations raw notes
 
