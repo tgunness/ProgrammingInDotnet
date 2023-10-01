@@ -1,6 +1,6 @@
 # Welcome to Programming .NET
 
-Welcome to the Programming in .NET by Trishan Gunness course! 
+Welcome to the Programming in .NET course by Trishan Gunness!
 
 This repository serves as a comprehensive resource hub for Software Engineering students eager to master the intricacies of .NET development. 
 
