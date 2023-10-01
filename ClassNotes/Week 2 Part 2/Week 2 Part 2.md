@@ -9,14 +9,15 @@ img[alt~="center"] {
 ---
 
 # Week 2 Part 2
-
+---
 # Review Last Class Exercise 
-
-## Car Dealership Part 1
+---
+# Car Dealership Part 1
 We will demo one [working example](https://github.com/tgunness/ProgrammingInDotnet/tree/main/Week2/CarDealership)
 
+---
 # Introduction to Windows Form GUI
-
+---
 ## Demo - Car Dealership Part 2
 Using the Models within Car Dealership Part 1, we will build a Win Form GUI App.
 
@@ -26,10 +27,10 @@ Our app will contain:
 - Button "Cars built by Ford"
 - Ouput Textbox for all output
 - Button "Exit"
-
+---
 
 # Simple File I/O
-
+---
 ## Stream Class
 C# has `Stream` abstract class which provides standard method to transfer bytes (read, write, etc.) to a source. 
 
@@ -38,7 +39,7 @@ Concrete Stream classes include:
 - MemoryStream - memory
 - BufferedStream - works with other streams to improve performance
 - NetworkStream - network sockets
-
+---
     
 ## FileStream
 
@@ -50,7 +51,8 @@ Concrete Stream classes include:
 
 [(ref)](https://learn.microsoft.com/en-us/dotnet/api/system.io.file.open?view=netframework-4.8#system-io-file-open(system-string-system-io-filemode-system-io-fileaccess-system-io-fileshare))
 
-```
+---
+```csharp
 /*
 The following code example creates a temporary file and writes some text to it. The example then * opens the file, using T:System.IO.FileMode.Open; that is, if the file did not already exist, it * would not be created.
 */
@@ -87,6 +89,7 @@ class Test
 }
 
 ```
+---
 
 ## Stream helpers
 `StreamWriter` - StreamWriter is a helper class for writing a string to a Stream
@@ -96,8 +99,10 @@ FileStream vs StreamReader:
 
 **[StreamReader/StreamWriter]** <--Read/Write String--> **[FileStream]** <--Read/Write bytes--> **[Physical File]**
 
+---
+
 **StreamReader**
-```
+```csharp
 using System;
 using System.IO;
 
@@ -145,6 +150,7 @@ class Test
 }
 // ref: the foundation of this example can be seen here https://learn.microsoft.com/en-us/dotnet/api/system.io.streamreader?view=netframework-4.8#examples
 ```
+---
 **StreamWriter**
 
 ```
@@ -186,12 +192,10 @@ namespace StreamReadWrite
 }
 // ref: https://learn.microsoft.com/en-us/dotnet/api/system.io.streamwriter?view=netframework-4.8#examples
 ```
-
+---
 
 # Lab 1 - Introduction
 
 [Lab 1 - Out of Sorts](https://mycanvas.mohawkcollege.ca/courses/92925/pages/lab-assignment-1?module_item_id=4762945)
 
 **Due: Sept 24th 2023 11:59pm**
-
-

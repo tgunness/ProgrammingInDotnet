@@ -8,10 +8,9 @@ img[alt~="center"] {
 </style>
 ---
 
-# Week 2 Part 1
-
-# C# Language
-
+# Week 2 Part 1 - # C# Language
+---
+<style scoped>section { font-size: 20px; }</style>
 # Overview
 - C# tied to .NET versions [ref](https://www.c-sharpcorner.com/article/c-sharp-versions/)
 - Hello World App
@@ -31,14 +30,15 @@ img[alt~="center"] {
         - args
         - params
         - return
-    
+--- 
 # System Input Output
 - `Console.Write`
 - `Console.WriteLine`
 - `Console.ReadLine`
     - no scanner object!
     - text is read, needs parsing
-
+---
+<style scoped>section { font-size: 20px; }</style>
 # C# types
 - Simple Types
     - sbyte (`System.SByte`)
@@ -54,6 +54,7 @@ img[alt~="center"] {
     - double (`System.Double`)
     - bool (`System.Boolean`)
     - decimal (`System.Decimal`)
+---
 - Class Types
     - `System.Object`
     - `System.String`
@@ -62,6 +63,7 @@ img[alt~="center"] {
     - `System.Array`
     - `System.Delegate`
     - `System.Exception`
+---
 - What is the decimal type?
 - Data Type Suffix
     - The data type suffix helps the compiler to unambiguously identify the data type of any value/literal.
@@ -70,12 +72,14 @@ img[alt~="center"] {
         decimal myMoney = 300.5m;
         float myRadius = 3.145f;
         ```
+---
 - Type conversion
     - `int.Parse` vs `Convert.ToInt32` (throws argumentnullexception)
     - `int.Parse` vs `int.TryParse`
     - casting
 - Explicit vs Implicit declaration (`var`)
-
+---
+<style scoped>section { font-size: 20px; }</style>
 # Strings
 - `string` vs `String` (string is keyword)
 - anything within `""`, including spaces
@@ -86,38 +90,41 @@ img[alt~="center"] {
     - `@"Hello \t World"` (verbatim string)
     - `$@ Hello World from \t {var}` (verbatim string interpolation)
     -  """ Raw String Literals (required C# 11+; NET 7.0) [ref](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/raw-string)
-        ```
-            string jsonString = """
-            {
-                "Date": "2019-08-01T00:00:00-07:00",
-                "TemperatureCelsius": 25,
-                "Summary": "Hot",
-                "DatesAvailable": [
-                    "2019-08-01T00:00:00-07:00",
-                    "2019-08-02T00:00:00-07:00"
-                ],
-                "TemperatureRanges": {
-                    "Cold": {
-                    "High": 20,
-                    "Low": -10
-                    },
-                    "Hot": {
-                    "High": 60,
-                    "Low": 20
-                    }
-                            },
-                "SummaryWords": [
-                    "Cool",
-                    "Windy",
-                    "Humid"
-                ]
+---
+<style scoped>section { font-size: 20px; }</style>
+```csharp
+    string jsonString = """
+    {
+        "Date": "2019-08-01T00:00:00-07:00",
+        "TemperatureCelsius": 25,
+        "Summary": "Hot",
+        "DatesAvailable": [
+            "2019-08-01T00:00:00-07:00",
+            "2019-08-02T00:00:00-07:00"
+        ],
+        "TemperatureRanges": {
+            "Cold": {
+            "High": 20,
+            "Low": -10
+            },
+            "Hot": {
+            "High": 60,
+            "Low": 20
             }
-            """; 
-        ```
-        there are rules to this, see https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#raw-string-literals
+                    },
+        "SummaryWords": [
+            "Cool",
+            "Windy",
+            "Humid"
+        ]
+    }
+    """; 
+```
+---
 - escape characters
     - `\r` `\n` `\t` `\\`
-
+---
+<style scoped>section { font-size: 20px; }</style>
 # Objects
 - Getters Setters vs Properties
     - `this`
@@ -138,8 +145,10 @@ img[alt~="center"] {
     - how to encapsulate? 
     - how to overload?
     - error handling / defensive coding
+---
 - Read-Only instance variables
     - `private readonly int _year;`
+---
 - Constructors
     ```
     public Account () {...}

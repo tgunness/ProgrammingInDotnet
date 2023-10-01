@@ -10,10 +10,13 @@ img[alt~="center"] {
 
 # Introduction to .NET and C#
 
-## What is .NET
+---
+<style scoped>section { font-size: 20px; }</style>
+# What is .NET
 
 .NET is a free, open-source, and cross-platform framework developed by Microsoft for building various types of software applications. It provides a comprehensive set of tools, libraries, and runtime environments that enable developers to create applications ranging from web and desktop applications to mobile apps and cloud services. The core components of .NET include:
 
+```
 1. **Common Language Runtime (CLR)**: The CLR is a key part of .NET that manages memory, handles execution, and provides various services to make it easier for developers to write and run applications.
 
 2. **Base Class Library (BCL)**: The BCL is a collection of pre-built classes and libraries that provide fundamental functionality like data access, file I/O, and networking, saving developers from reinventing the wheel for common tasks.
@@ -30,14 +33,18 @@ img[alt~="center"] {
 
 8. **.NET 5 and .NET 6**: These versions unify the .NET ecosystem, combining .NET Core, .NET Framework, and Xamarin into a single platform, making it easier for developers to write code that runs on multiple platforms.
 
+```
 .NET allows developers to write code in their language of choice and deploy it on various platforms, including Windows, macOS, and Linux. It's widely used for building enterprise applications, web services, cloud-based solutions, and more. With its strong ecosystem, tooling support, and continuous development by Microsoft and the open-source community, .NET remains a popular choice for modern software development.
 
+---
+<style scoped>section { font-size: 20px; }</style>
 ## What is C#
 
 C# (pronounced "C sharp") is a modern, high-level, and object-oriented programming language developed by Microsoft. It was introduced in the early 2000s as part of the .NET initiative and has since become one of the most popular languages for building a wide range of software applications. C# is known for its simplicity, robustness, and versatility, making it a favorite choice for developers in various domains, including web development, desktop applications, mobile app development, and game development.
 
 Here are some key characteristics and features of C#:
 
+```
 1. **Object-Oriented**: C# is a fully object-oriented language, which means it supports principles like encapsulation, inheritance, and polymorphism. This helps in writing clean and organized code.
 
 2. **Type-Safe**: C# is statically typed, meaning that type checking is done at compile-time. This helps catch many errors before the code is even executed.
@@ -57,11 +64,11 @@ Here are some key characteristics and features of C#:
 9. **Versatile Ecosystem**: C# can be used to develop a wide range of applications, including web applications with ASP.NET, mobile apps with Xamarin, desktop applications with Windows Forms or WPF, and even game development with Unity.
 
 10. **Continuously Evolving**: Microsoft continues to invest in C# by releasing new versions with enhancements and features to keep the language competitive and up-to-date.
-
+```
 C# has a thriving developer community, extensive documentation, and a wealth of third-party libraries and tools, making it an excellent choice for both beginners and experienced programmers looking to build modern, efficient, and maintainable software.
 
-
-## Hello World in C#
+---
+# Hello World in C#
 
 A "Hello, World!" program in C# is a simple example that demonstrates the basic structure of a C# program. It prints the message "Hello, World!" to the console. Here's how you can create a "Hello, World!" app in C#:
 
@@ -76,8 +83,9 @@ class Program
     }
 }
 ```
-
-Here's a breakdown of what this program does:
+---
+<style scoped>section { font-size: 20px; }</style>
+# Here's a breakdown of what this program does:
 
 - `using System;`: This line includes the `System` namespace, which provides access to fundamental types and classes like `Console` for input and output operations.
 
