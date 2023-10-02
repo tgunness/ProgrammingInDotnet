@@ -46,7 +46,7 @@ img[alt~="center"] {
 <style scoped>section { font-size: 20px; }</style>
 # The Problem - Ie. School Objects
 
-![Alt text](image.png)
+![Alt text](week5.1-image.png)
 
 ---
 <style scoped>section { font-size: 20px; }</style>
@@ -57,7 +57,7 @@ img[alt~="center"] {
 - Relate objects to one another
 - Share attributes and behavior
 
-![bg right:50% 100%](image-1.png)
+![bg right:50% 100%](week5.1-image-1.png)
 
 ---
 
@@ -103,7 +103,7 @@ In OOP, relationships are formed in a couples of ways:
   }
   ```
 
-![bg right:35% 50%](image-2.png)
+![bg right:35% 50%](week5.1-image-2.png)
 
 *note the arrows in UML diagram
 
@@ -124,7 +124,7 @@ In OOP, relationships are formed in a couples of ways:
 ---
 <style scoped>section { font-size: 15px; }</style>
 
-![bg center 20%](image-3.png)
+![bg center 20%](week5.1-image-3.png)
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 *note the arrows in UML diagram
 
@@ -151,7 +151,7 @@ public class ChangeRequest : WorkItem
 ```
 ---
 
-![bg center 70%](class-inheritance-diagram.png)
+![bg center 70%](week5.1-class-inheritance-diagram.png)
 
 ---
 # Abstract Class
@@ -289,7 +289,7 @@ You are given a set of objects within a School. You are to create relationships 
 1. Create a UML diagram for these objects (be sure to use correct arrows)
 2. Create  the classes in code
 
-![bg right:60% 100%](image.png)
+![bg right:60% 100%](week5.1-image.png)
 
 ---
 
