@@ -6,6 +6,9 @@ This repository serves as a comprehensive resource hub for Software Engineering 
 
 Let's embark on this journey together and unlock the full potential of your software development endeavors!
 
+# Website
+[Programming in .NET](https://tgunness.github.io/ProgrammingInDotnet/)
+
 # Presentations
 - [Week 1](https://tgunness.github.io/ProgrammingInDotnet/Week1.html)
 - [Week 2 Part 1](https://tgunness.github.io/ProgrammingInDotnet/Week2Part1.html)
@@ -18,9 +21,9 @@ Let's embark on this journey together and unlock the full potential of your soft
 
 # Repo Structure
 
-- [ClassNotes](https://github.com/tgunness/ProgrammingInDotnet/tree/main/ClassNotes) - this folder contains professor notes used throughout lectures
-- [Exercises](https://github.com/tgunness/ProgrammingInDotnet/tree/main/Exercises) - this folder contains completed exercises by myself
-- [InClassDemos](https://github.com/tgunness/ProgrammingInDotnet/tree/main/InClassDemos) - this folder contains code that was coded in class (given pace of class, code within this folder could be unstable)
+- [Presentations](https://github.com/tgunness/ProgrammingInDotnet/tree/main/Presentations) - this folder contains all presentations raw notes
+- [InClassDemoAndExercises](https://github.com/tgunness/ProgrammingInDotnet/tree/main/InClassDemoAndExercises) - this folder contains code that was coded in class, demos and exercises (given pace of class, code within this folder could be unstable)
 - [RecordedSessions](https://github.com/tgunness/ProgrammingInDotnet/tree/main/RecordedSessions) - this folder contains hyperlinks to all recorded class sessions
-- [docs](https://github.com/tgunness/ProgrammingInDotnet/tree/main/docs) - this folder contains all presentations raw notes
+- [ClassNotes](https://github.com/tgunness/ProgrammingInDotnet/tree/main/ClassNotes) - this folder contains professor notes (ie. presentation raw files)
+
 
