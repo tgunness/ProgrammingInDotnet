@@ -222,7 +222,7 @@ You can only inherit from a Single Class (concrete or abstract) and you can and 
 
 - Polymorphism is a Greek word that means “many shaped”.
 
-- In OOP, Polymorphism is the ability of an object to take on many forms
+- In OOP, **Polymorphism is the ability of an object to take on many forms**
 
 - Any object that can pass the IS-A test, is considered to be polymorphic.
 
@@ -232,12 +232,12 @@ public class Animal { }
 public class Deer : Animal, IFeedable { }
 ```
 
-A Deer IS-A Animal
-A Deer IS-A IFeedable
-A Deer IS-A Deer
-A Deer IS-A Object 
+A `Deer` IS-A `Animal`
+A `Deer` IS-A `IFeedable`
+A `Deer` IS-A `Deer`
+A `Deer` IS-A `Object`
 
-**Deer is considered to be polymorphic**
+**-->`Deer` is considered to be polymorphic<--**
 
 ---
 
@@ -249,14 +249,213 @@ A Deer IS-A Object
 
 Animal deer = new Deer();
 IVegetarian deer2 = new Deer();
-Object deer3 = new Deer();
+Object deer3 = new Deer(); //everything IS-A a Object type
+```
 
+###### ...demo
+
+---
+# Polymorphism Code Demo - My Animals
+---
+
+# Polymorphism - Benefit
+
+Polymorphism in C# allows for code reusability, flexibility, and simplified maintenance by enabling objects of different classes to be treated uniformly, promoting clean code design.
+
+
+---
+
+# QUICK BREAK 
+...new topic up next
+
+---
+
+# Exceptions and Exception Handling
+
+- An exception is an abnormal or unexpected event that occurs during the execution of a program that abrupt the execution of code.
+  - Divide by zero, null object reference, file not found, etc. all violate normal execution.
+
+- Whenever an exception occurs the .NET Runtime triggers an event that halts execution, an `Exception` object is created and this Exception object is **"thrown"**
+
+- The `Exception` object container information about the event, include type, message, stack trace, and additional information
+  - Stack Trace: shows the order, chain, of method calls and their location in code when the exception occurs
+
+---
+# Exception Demo
+
+```csharp 
+public string CalculateAge()
+{
+    int convertedAge = 10 / _age; //could throw exception depending on _age
+    return $"Cat is {convertedAge} years old";
+}
+```
+###### ...demo
+---
+# Exception Handling
+
+- C# provides try-catch blocks to allows for graceful error recovery and prevention of program crashes.
+- Code that might throw an exception is placed in the `try` block
+- Exception types can be caught and handled in associated `catch` blocks. 
+
+---
+# Exception Handling - try catch
+
+
+```csharp 
+public string CalculateAge()
+{
+  try
+  {
+    int convertedAge = 10 / _age; //could throw exception depending on _age
+    return $"Cat is {convertedAge} years old";
+  }
+  catch(Exception e)
+  {
+    Console.WriteLine("error occurred");
+    return "age unknown";
+  }
+}
 ```
 ---
-# Polymorphic Code Demo - My Farm Animals
+
+# Exception Handling - try with multiple catch
+
+```csharp 
+public string CalculateAge()
+{
+    try
+    {
+        int convertedAge = 10 / _age;
+        return $"Cat is {convertedAge} years old";
+    }
+    catch(DivideByZeroException e)
+    {
+        return "unknown due to divide zero";
+    }
+    catch(ArgumentException e)
+    {
+        return "unknown due to invalid arg";
+    }
+    catch(Exception e)
+    {
+        return "unknown, for reasons unknown";
+    }
+}
+```
+---
+# Exception Handling - try catch finally
+
+- `finally` block allows you to clean up or release resources in a single spot (don't need to add to try and add to catch)
+```csharp 
+public string CalculateAge()
+{
+    try
+    {
+        int convertedAge = 10 / _age;
+        return $"Cat is {convertedAge} years old";
+    }
+    catch(DivideByZeroException e)
+    {
+        return "unknown due to divide zero";
+    }
+    finally
+    {
+      //code in here is always called 
+    }
+}
+```
 
 
 ---
+
+# Throwing Exceptions
+
+- Sometimes its advantageous to halt execution yourself (ie. you got invalid results after calculation or invalid arguments). 
+
+- You can `throw` an exception
+
+```csharp
+public Cat(int age)
+{
+    if (age == 0)
+        throw new ArgumentException("age can not be zero");
+
+    _age = age;
+}
+```
+
+---
+# Creating Custom Exception
+
+- You can make your own Exception using Inheritance!
+
+```csharp
+public class InvalidAnimalException : Exception
+{
+    public string ProblematicAnimal;
+    public InvalidAnimalException() { }
+    public InvalidAnimalException(string message) : base(message) { }
+    public InvalidAnimalException(string message, string animal) : base(message) 
+    {
+        ProblematicAnimal = animal;
+    }
+}
+```
+```csharp
+    if (age == 0)
+        throw new InvalidAnimalException("age can not be zero", "Cat");
+    _age = age;
+```
+---
+
+# Exceptions - Best Practices 
+
+- Use try/catch/finally blocks to recover from errors or release resources
+- Handle common conditions without throwing exceptions
+- Design classes so that exceptions can be avoided
+- Throw exceptions instead of returning an error code/string
+- Use the predefined .NET exception types as much as possible
+- End exception class names with the word Exception
+- Include three constructors in custom exception classes
+- Ensure that exception data is available when code executes remotely
+- Use grammatically correct error messages
+- In custom exceptions, provide additional properties as needed
+
+
+###### https://learn.microsoft.com/en-us/dotnet/standard/exceptions/best-practices-for-exceptions
+
+
+---
+# Exercise - Lab 2 Assignment
+
+- Now that we've hit end of Week 5, you're equipped with all knowledge required to complete Lab Assignment 2
+
+- We will leave the reminder of class to work on Part 1 or Part 2 of this assignment.
+  - Note: we'll take a deeper look at GUI next week that aids with Part 2
+---
+
+![bg 60%](Week5.2-image.png)
+
+
+---
+# Conclusion
+
+- This week concludes the "Fundamentals of OOP".
+- Topics we touch include:
+  - Classes and Objects
+  - Association
+  - Inheritance
+    - Base Class
+    - Abstract Class
+    - Interface
+  - Polymorphism
+- We showed how these OOP fundamentals can reduce code complexity, increase reusability and maintainability.
+
+ 
+--- 
+# End
+
 
 
 
