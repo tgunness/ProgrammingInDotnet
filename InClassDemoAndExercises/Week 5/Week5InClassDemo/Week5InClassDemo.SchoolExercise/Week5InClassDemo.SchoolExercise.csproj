@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\IPayable.cs" />
+    <Compile Include="Interface\ITerminate.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\FacultyMember.cs" />
