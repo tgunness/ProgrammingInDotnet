@@ -1,4 +1,6 @@
-﻿namespace Week5InClassDemo.Exceptions
+﻿using System;
+
+namespace Week5InClassDemo.Exceptions
 {
     public class Program
     {
@@ -6,6 +8,7 @@
         {
             Vet vet = new Vet();
             vet.PrintAllAnimals();
+            Console.ReadLine();
         }
     }
 }

@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Cat.cs" />
     <Compile Include="IAnimal.cs" />
+    <Compile Include="ProblematicAnimalException.cs" />
     <Compile Include="Vet.cs" />
     <Compile Include="Dog.cs" />
     <Compile Include="Program.cs" />

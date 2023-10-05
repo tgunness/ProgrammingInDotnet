@@ -21,7 +21,15 @@ namespace Week5InClassDemo.Exceptions
         {
             foreach(var animal in _animals)
             {
-                Console.WriteLine(animal.CalculateAge());
+                try
+                {
+                    Console.WriteLine(animal.CalculateAge());
+                }
+                catch(ProblematicAnimalException e)
+                {
+                    Console.WriteLine($"oops you've got a problematic {e.ProblemAnimal}!!");
+                }
+                
             }
         }
     }
