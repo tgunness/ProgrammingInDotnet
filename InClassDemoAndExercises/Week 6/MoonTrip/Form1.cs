@@ -29,6 +29,7 @@ namespace MoonTrip
         {
             InitializeComponent();
             departureMonthCalendar.MinDate = DateTime.Now; //The MinDate property is set to prevent a user from selecting a Date earlier than today
+            _allBookedTrips = new List<AstronautTrip>();
         }
 
         private bool validDate = false;  // Set when a valid departure date is selected
@@ -45,7 +46,7 @@ namespace MoonTrip
             DateTime firstSaturdayOfMonth = GetFirstSaturday(departureMonthCalendar.SelectionStart);
 
 
-            if(departureMonthCalendar.MinDate > firstSaturdayOfMonth) //if user selected current month, and first saturday has already passed, then pick next month's first saturday
+            if (departureMonthCalendar.MinDate > firstSaturdayOfMonth) //if user selected current month, and first saturday has already passed, then pick next month's first saturday
             {
                 statusLabel.ForeColor = Color.Red;
                 validDate = false;
@@ -94,50 +95,68 @@ namespace MoonTrip
         }
 
         /// <summary>
-        /// Book the trip but creating an AstronautTrip object and adding it to the listbox.
-        /// This can only be done with an astronaut's name and a selected date.
-        /// An astronaut can only be listed once per trip.
-        /// There is a maximum of three astronauts per trip.
-        /// The lisatbox is sorted by departure date.
+        /// Book the trip by first validating form inputs so that
+        ///   - name is given
+        ///   - no more than 3 people booked on selected date
+        ///   - name isn't already booked
+        /// Once form is valid we add trip to _allBookedTrips
+        /// Then refresh the ListBox, sorting trips by depart date
         /// </summary>
         /// <param name="sender">Default sender</param>
         /// <param name="e">Default event arguments</param>
         private void BookTripButton_Click(object sender, EventArgs e)
         {
-            // Assume we'll be issuing error messages
+            // Valid Form Inputs
+
+            bool isValid = true;
             statusLabel.ForeColor = Color.Red;
+            statusLabel.Text = "";
 
-            // Create an AstronautTrip object with the current values
-            AstronautTrip newTrip = new AstronautTrip(astronautTextBox.Text, departureMonthCalendar.SelectionStart.AddHours(6).AddMinutes(15));
-
-            int count = 0;             // How many astronauts are already booked for this trip
-            bool booked = false;       // If this astronaut is already booked for this trip
-
-            // Go through each entry in the listbox and determine how many match the selected departure date, and if the astronaut is already booked
-            foreach (AstronautTrip trip in tripListBox.Items)
+            // Astronauts need a name
+            if (astronautTextBox.Text == String.Empty)
             {
-                if (trip.Depart.Equals(newTrip.Depart))
-                {
-                    count++;
-
-                    if (trip.Name.Equals(newTrip.Name))
-                        booked = true;
-                }
-            }
-
-           
-
-            // Everything is good, so add to the listbox
-            else
-            {
-                tripListBox.Items.Add(newTrip);
-                statusLabel.ForeColor = Color.Green;
-                statusLabel.Text = "Trip successfully booked.";
-
-                // Sort the listbox by departure date
-                SortList();
+                isValid = false;
+                statusLabel.Text += "Astronaut name is required.\n";
                 astronautTextBox.Focus();
             }
+
+            // Each trip has a maximum of three astronauts that can be booked, count number books on the selected Date (.Date is how we ignore time)
+            if (_allBookedTrips.Count(t => t.Depart.Date.Equals(departureMonthCalendar.SelectionStart.Date)) >= 3)
+            {
+                isValid = false;
+                statusLabel.Text += "Capsule is fully booked on this date, it can only carry 3 persons on single trip.\n";
+            }
+
+            // Each trip has a maximum of three astronauts that can be booked
+            if (_allBookedTrips.Any(t => t.Name.ToLower() == astronautTextBox.Text.ToLower()))
+            {
+                isValid = false;
+                statusLabel.Text += $"{astronautTextBox.Text} is already booked for this trip.\n";
+            }
+
+            // A valid date needs to be selected
+            if (!validDate)
+            {
+                isValid = false;
+                statusLabel.Text += "Valid date needs to be selected.\n";
+                departureMonthCalendar.Focus();
+            }
+
+            if (isValid)
+            {
+                _allBookedTrips.Add(new AstronautTrip(astronautTextBox.Text, departureMonthCalendar.SelectionStart.AddHours(6).AddMinutes(15)));
+                statusLabel.ForeColor = Color.Green;
+                statusLabel.Text = "Trip successfully booked.";
+            }
+
+            RefreshBookingsView();
+        }
+
+
+        private void RefreshBookingsView()
+        {
+            tripListBox.Items.Clear();
+            tripListBox.Items.AddRange(_allBookedTrips.OrderBy(a => a.Depart).ToArray());
         }
 
 
@@ -150,24 +169,6 @@ namespace MoonTrip
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        /// <summary>
-        /// This method will sort the listbox contents. The listbox can only be default sorted
-        /// as a string but we'd like to sort by departure times.
-        /// 
-        /// To do this, copy the contents out to a list, sort the list, then copy the list
-        /// contents back to the listbox.
-        /// </summary>
-        private void SortList()
-        {
-            List<AstronautTrip> sortedList = tripListBox.Items.Cast<AstronautTrip>().ToList();
-
-            sortedList.Sort();
-
-            tripListBox.Items.Clear();
-
-            tripListBox.Items.AddRange(sortedList.ToArray());
         }
     }
 }
