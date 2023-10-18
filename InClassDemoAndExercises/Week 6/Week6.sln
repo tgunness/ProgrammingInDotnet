@@ -3,9 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week6InClassDemo", "Week6InClassDemo\Week6InClassDemo.csproj", "{49363959-5797-4B97-8D69-3A95BE121895}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week6InClassDemo.LabRoomBooking", "Week6InClassDemo\Week6InClassDemo.LabRoomBooking.csproj", "{49363959-5797-4B97-8D69-3A95BE121895}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoonTrip", "MoonTrip\MoonTrip.csproj", "{4754B131-3605-4EB2-AB59-B40F0ED14E5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week6InClassDemo.Checkboxes", "Week6InClassDemo.Checkboxes\Week6InClassDemo.Checkboxes.csproj", "{C06A5E19-C84E-4D6D-A6DB-163DACB50ED3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week6InClassDemo.ListBox", "Week6InClassDemo.ListBox\Week6InClassDemo.ListBox.csproj", "{A2F49635-CE57-4CCD-B96E-6A538AC2601A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week6InClassDemo.ComboBox", "Week6InClassDemo.Dropdown\Week6InClassDemo.ComboBox.csproj", "{01708503-93EE-468B-882D-88652EE4E6C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week6InClassDemo.MultipleForms", "Week6InClassDemo.MultipleForms\Week6InClassDemo.MultipleForms.csproj", "{E1BE9E9A-4FD0-4881-941C-A9E88080E298}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +29,22 @@ Global
 		{4754B131-3605-4EB2-AB59-B40F0ED14E5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4754B131-3605-4EB2-AB59-B40F0ED14E5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4754B131-3605-4EB2-AB59-B40F0ED14E5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C06A5E19-C84E-4D6D-A6DB-163DACB50ED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C06A5E19-C84E-4D6D-A6DB-163DACB50ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C06A5E19-C84E-4D6D-A6DB-163DACB50ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C06A5E19-C84E-4D6D-A6DB-163DACB50ED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2F49635-CE57-4CCD-B96E-6A538AC2601A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2F49635-CE57-4CCD-B96E-6A538AC2601A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2F49635-CE57-4CCD-B96E-6A538AC2601A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2F49635-CE57-4CCD-B96E-6A538AC2601A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01708503-93EE-468B-882D-88652EE4E6C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01708503-93EE-468B-882D-88652EE4E6C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01708503-93EE-468B-882D-88652EE4E6C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01708503-93EE-468B-882D-88652EE4E6C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1BE9E9A-4FD0-4881-941C-A9E88080E298}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1BE9E9A-4FD0-4881-941C-A9E88080E298}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1BE9E9A-4FD0-4881-941C-A9E88080E298}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1BE9E9A-4FD0-4881-941C-A9E88080E298}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
