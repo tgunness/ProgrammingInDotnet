@@ -28,6 +28,8 @@ namespace Week6InClassDemo.Checkboxes
                 totalChecked++;
             if (checkBox4.Checked)
                 totalChecked++;
+            if(checkBox5.Checked)
+                totalChecked++;
 
             MessageBox.Show($"You have checked {totalChecked} boxes");
         }
@@ -36,7 +38,7 @@ namespace Week6InClassDemo.Checkboxes
         {
             var totalChecked = checkboxGroup.Controls
                                             .OfType<CheckBox>()
-                                            .Where(c => c.Checked)
+                                            .Where(c => c.Checked && c.Text.Contains("windows"))
                                             .Count();
 
 

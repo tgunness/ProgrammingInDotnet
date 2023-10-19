@@ -21,6 +21,7 @@ namespace Week6InClassDemo.Dropdown
             myComboBox.Items.Add(456);
             myComboBox.Items.Add('c');
             myComboBox.Items.Add((double)789);
+            myComboBox.Items.Add(new object());
         }
 
         public void ShowWhatsInComboxBox(object sender, EventArgs e)

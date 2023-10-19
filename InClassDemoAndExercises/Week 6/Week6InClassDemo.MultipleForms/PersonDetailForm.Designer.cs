@@ -1,6 +1,6 @@
 ﻿namespace Week6InClassDemo.MultipleForms
 {
-    partial class Form1
+    partial class PersonDetailForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.output = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // output
+            // 
+            this.output.AutoSize = true;
+            this.output.Location = new System.Drawing.Point(13, 22);
+            this.output.Name = "output";
+            this.output.Size = new System.Drawing.Size(44, 16);
+            this.output.TabIndex = 0;
+            this.output.Text = "label1";
+            // 
+            // PersonDetailForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.output);
+            this.Name = "PersonDetailForm";
+            this.Text = "PersonDetailForm";
+            this.Load += new System.EventHandler(this.PersonDetailForm_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label output;
     }
 }
-

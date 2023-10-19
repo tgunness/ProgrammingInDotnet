@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Week6InClassDemo.MultipleForms
+namespace Week6InClass.GroupBox
 {
     public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
+            
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Week6InClassDemo.MultipleForms
+namespace Week6InClass.GroupBox
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace Week6InClassDemo.MultipleForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ListBoxes());
+            Application.Run(new Form1());
         }
     }
 }

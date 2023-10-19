@@ -40,6 +40,8 @@
             this.tripListBox = new System.Windows.Forms.ListBox();
             this.statusLabel = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -66,7 +68,7 @@
             // 
             this.astronautTextBox.Location = new System.Drawing.Point(211, 131);
             this.astronautTextBox.Name = "astronautTextBox";
-            this.astronautTextBox.Size = new System.Drawing.Size(245, 31);
+            this.astronautTextBox.Size = new System.Drawing.Size(256, 31);
             this.astronautTextBox.TabIndex = 3;
             // 
             // label3
@@ -158,6 +160,15 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MoonTrip.Properties.Resources.moonPicture;
+            this.pictureBox1.Location = new System.Drawing.Point(919, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(224, 174);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AcceptButton = this.bookTripButton;
@@ -165,6 +176,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.exitButton;
             this.ClientSize = new System.Drawing.Size(1187, 543);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.tripListBox);
@@ -183,6 +195,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Let\'s go to the Moon";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,6 +215,7 @@
         private System.Windows.Forms.ListBox tripListBox;
         private System.Windows.Forms.Label statusLabel;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

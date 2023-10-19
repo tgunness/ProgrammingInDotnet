@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Week6InClassDemo.ListBox
+namespace Week6InClassDemo.MultipleForms
 {
     public class Person
     {
