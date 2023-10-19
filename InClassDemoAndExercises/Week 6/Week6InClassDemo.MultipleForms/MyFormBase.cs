@@ -7,8 +7,9 @@ using System.Windows.Forms;
 
 namespace Week6InClassDemo.MultipleForms
 {
-    public class MyFormBase : Form
+    public partial class MyFormBase : Form
     {
-        public Person selectedPerson { get; set; }
+        public static Person _selectedPerson;
+        public static List<Person> _allPersons;
     }
 }

@@ -19,7 +19,7 @@ namespace Week6InClassDemo.MultipleForms
 
         public void PersonDetailForm_Load(object sender, EventArgs e)
         {
-            output.Text = base.selectedPerson.ToString();
+            output.Text = _selectedPerson.ToString();
         }
     }
 }
