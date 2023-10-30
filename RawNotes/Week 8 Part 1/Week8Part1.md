@@ -34,7 +34,9 @@ img[alt~="center"] {
     - Strings
     - Characters
     - Files & Streams
+    - Serialization
     - ~~Events & Delegates~~ (lots to cover here, moving to Week 9.1)
+    - ~~Classes File and Directory~~ (moving to Week 9.1)
   - Part 2 
     - Gaming I
 </b>
@@ -73,7 +75,7 @@ static void Main()
 
 ---
 # `string` Constructors
-![Alt text](image.png)
+![Alt text](Week8.1-image.png)
 
 ---
 # `string` Indexer, Length, & CopyTo
@@ -119,7 +121,7 @@ static void Main()
 ```
 ---
 # `string` Indexer, Length, & CopyTo
-![Alt text](image-1.png)
+![Alt text](Week8.1-image-1.png)
 
 ---
 # Locating characters and substrings in `strings`
@@ -287,7 +289,7 @@ static void Main()
 ```
 ---
 # Comparing `string`
-![Alt text](image-2.png)
+![Alt text](Week8.1-image-2.png)
 
 ---
 # StringBuilder
@@ -407,23 +409,122 @@ public class Example
 ---
 # Files and Streams
 
+---
+# Recap - Stream Class
+
+- C# has Stream abstract class which provides standard method to transfer bytes (read, write, etc.) to a source.
+
+- Concrete Stream classes include:
+  - FileStream - files
+  - MemoryStream - memory
+  - BufferedStream - works with other streams to improve performance
+  - NetworkStream - network sockets
+
+---
+
+# Recap - FileStream
+
+`FileStream file = new FileStream("path.txt", FileMode, FileAccess, FileShare);`
+- `path` string - path to file
+- `FileMode` enum - Append | Create | CreateNew | Open | OpenOrCreate | Truncate
+- `FileAccess` enum - Read | ReadWrite | Write
+- `FileShare` enum - declares how to share this file with others (typically `FileShare.None` is chosen)
+
+---
+# Stream helpers
+
+`StreamWriter` - StreamWriter is a helper class for writing a string to a Stream
+`StreamReader` - StreamReader is a helper class for reading characters from a Stream
+
+FileStream vs StreamReader:
+
+```
+[StreamReader/StreamWriter] <--Read/Write String--> [FileStream] <--Read/Write bytes--> [Physical File]
+```
+
+---
+# Files and Streams
+
+- C# views each file as a sequential stream of bytes 
+- Each file ends either with an end-of-file marker or at a specific byte number that’s recorded in a system-maintained administrative data structure.
+- When a file is opened, an object is created and a stream is associated with the object.
+
+![Alt text](Week8.1-image-3.png)
+
 --- 
 # Creating a Sequential-Access Text File
 
+- C# imposes no structure on files.
+- Thus, the concept of a “record” does not exist in C# files.
+- This means that you must structure files to meet the requirements of your apps.
 ---
+# Creating a Sequential-Access Text File
+
+DEMO : ReadSequentialAccessFile
+
+---
+
+# Repositioning FileStream pointer
+
+- To retrieve data sequentially from a file, programs normally start from the beginning of the file, reading consecutively until the desired data is found.
+
+- It sometimes is necessary to process a file sequentially several times (from the beginning of the file) during the execution of a program.
+
+- When a FileStream object is opened, its file-position pointer is set to byte position 0 (i.e., the beginning of the file)
+
+- A FileStream object can reposition its file-position pointer (which contains the byte number of the next byte to be read from or written to the file) to any position in the file.
+---
+
+# Repositioning FileStream pointer
+
+DEMO : CreditInquiry
+
+---
+
 # Serialization
 
----
-# Classes File and Directory
+- When information is read from a stream (ie. FileStream reading a disk file) certain information was lost, such as the type of each value.
+  - For instance, if the value "3" is read from a file, there’s no way to tell if the value came from an int, a string or a decimal.
+  - We have only data, not type information, on disk 
+  - Knowledge of the format (ie. comma separated), data and data type must be known and coded for
 
+- C# provides such a mechanism, called object serialization
+
+
+---
+# Serialization (cont.)
+
+- Serialization is used in C# in various real-world scenarios to convert object data into a format that can be easily stored, transmitted, or reconstructed.
+- Serialization in C# plays a crucial role in data management, communication, and data interchange in a wide range of applications, from web services to desktop software and distributed systems. It allows data to be transformed into a portable format that can be used across different systems and platforms.
+
+- Example: When data needs to be sent over a network, it is often serialized into a format like JSON or XML before transmission. The receiving end deserializes the data to reconstruct the original object.
+
+---
+# Serialization - BinaryFormatter 
+
+- Class BinaryFormatter (namespace System.Runtime.Serialization.Formatters.Binary) enables entire objects to be written to or read from a stream.
+- BinaryFormatter method Serialize writes an object’s representation to a file.
+- BinaryFormatter method Deserialize reads this representation from a file and reconstructs the original object.
+- Both methods throw a SerializationException if an error occurs during serialization or deserialization.
+- Both methods require a Stream object (e.g., the FileStream) as a parameter so that the BinaryFormatter can access the correct stream.
 
 --- 
-# Conclusion
 
+# Serialization (cont)
+
+DEMO - ReadSequentialAccessFile
+
+---
+# Conclusion
+- Strings
+- Characters
+- Files & Streams
+- Sequential File Reads
+- Serialization
 
 ---
 # Next Class
-
+## Gaming I
 
 ---
 
