@@ -15,6 +15,20 @@ public class Example
             sb.Append("This is an additional sentence.");
             ShowSBInfo(sb);
         }
+
+        MoreStringBuilderStuff();
+        Console.ReadLine();
+    }
+
+
+    public static void MoreStringBuilderStuff()
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.Append("This is the beginning of a sentence, ");
+        sb.Replace("the beginning of ", "");
+        sb.Insert(sb.ToString().IndexOf("a ") + 2, "complete ");
+        sb.Replace(",", ".");
+        Console.WriteLine(sb.ToString());
     }
 
     private static void ShowSBInfo(StringBuilder sb)
