@@ -34,7 +34,7 @@ img[alt~="center"] {
     - Strings
     - Characters
     - Files & Streams
-    - Events & Delegates
+    - ~~Events & Delegates~~ (lots to cover here, moving to Week 9.1)
   - Part 2 
     - Gaming I
 </b>
@@ -42,7 +42,7 @@ img[alt~="center"] {
 ---
 # Week 8 Part 1 
 
-## Strings, Characters, Files & Streams, Events & Delegates
+## Strings, Characters, Files & Streams
 
 ---
 # `string` - A Deeper Look
@@ -50,29 +50,360 @@ img[alt~="center"] {
 ---
 # `string` Constructors
 
+```csharp
+static void Main()
+{
+  // string initialization                             
+  char[] characterArray =
+      {'b', 'i', 'r', 't', 'h', ' ', 'd', 'a', 'y'};
+  var originalString = "Welcome to C# programming!";
+  var string1 = originalString;
+  var string2 = new string(characterArray);
+  var string3 = new string(characterArray, 6, 3);
+  var string4 = new string('C', 5);
+
+  Console.WriteLine($"string1 = \"{string1}\"\n" +
+      $"string2 = \"{string2}\"\n" +
+      $"string3 = \"{string3}\"\n" +
+      $"string4 = \"{string4}\"\n");
+}
+```
+
+**What do you think the output will be?**
+
+---
+# `string` Constructors
+![Alt text](image.png)
+
 ---
 # `string` Indexer, Length, & CopyTo
 
+- `string` can be treated and thought of as an array
+  - It has Index (indexer) `"helloworld".Index[0]`
+  - It has length property `"helloworld".Length`
+  - It can be iterated `foreach(char x in "helloworld")`
+  - It can be make use of Array.CopyTo `"helloworld".CopyTo(___)`
+
 ---
-# Comparing `string`
+# `string` Indexer, Length, & CopyTo
+```csharp
+static void Main()
+{
+  var string1 = "hello there";
+  var characterArray = new char[5];
+
+  Console.WriteLine($"string1: \"{string1}\""); // output string1
+
+  // test Length property                                     
+  Console.WriteLine($"Length of string1: {string1.Length}");
+
+  // loop through characters in string1 and display reversed
+  Console.Write("The string reversed is: ");
+
+  for (int i = string1.Length - 1; i >= 0; --i)
+  {
+      Console.Write(string1[i]);
+  }
+
+  // copy characters from string1 into characterArray           
+  string1.CopyTo(0, characterArray, 0, characterArray.Length);
+  Console.Write("\nThe character array is: ");
+
+  foreach (var element in characterArray)
+  {
+      Console.Write(element);
+  }
+
+  Console.WriteLine("\n");
+}
+```
+---
+# `string` Indexer, Length, & CopyTo
+![Alt text](image-1.png)
 
 ---
 # Locating characters and substrings in `strings`
+- Seeing `string` as array helps with search and extraction of substrings
 
+- Its regularly necessary to search for a character or set of characters in `string`
+  - For example, a programmer creating a word processor would want to provide capabilities for searching through documents.
+
+- `IndexOf`, `IndexOfAny`, `LastIndexOf` and `LastIndexOfAny` are some method that can help searching  for a specified character or substring in a string
+
+---
+# Locating characters and substrings in `strings`
+```csharp
+static void Main()
+   {
+      var letters = "abcdefghijklmabcdefghijklm";
+      char[] searchLetters = {'c', 'a', '$'};
+
+      // test IndexOf to locate a character in a string
+      Console.WriteLine($"First 'c' is located at index " +
+          letters.IndexOf('c'));
+      Console.WriteLine("First 'a' starting at 1 is located at index " +
+         letters.IndexOf('a', 1));
+      Console.WriteLine("First '$' in the 5 positions starting at 3 " +
+         $"is located at index " + letters.IndexOf('$', 3, 5));
+
+      // test LastIndexOf to find a character in a string
+      Console.WriteLine($"\nLast 'c' is located at index " +
+         letters.LastIndexOf('c'));
+      Console.WriteLine("Last 'a' up to position 25 is located at " +
+         "index " + letters.LastIndexOf('a', 25));
+      Console.WriteLine("Last '$' in the 5 positions ending at 15 " +
+         "is located at index " + letters.LastIndexOf('$', 15, 5));
+
+      // test IndexOf to locate a substring in a string
+      Console.WriteLine("\nFirst \"def\" is located at index " +
+         letters.IndexOf("def"));
+      Console.WriteLine("First \"def\" starting at 7 is located at " +
+         "index " + letters.IndexOf("def", 7));
+      Console.WriteLine("First \"hello\" in the 15 positions " +
+         "starting at 5 is located at index " +
+         letters.IndexOf("hello", 5, 15));
+
+      // test LastIndexOf to find a substring in a string
+      Console.WriteLine("\nLast \"def\" is located at index " +
+         letters.LastIndexOf("def"));
+      Console.WriteLine("Last \"def\" up to position 25 is located " +
+         "at index " + letters.LastIndexOf("def", 25));
+      Console.WriteLine("Last \"hello\" in the 15 positions " +
+         "ending at 20 is located at index " +
+         letters.LastIndexOf("hello", 20, 15));
+
+      // test IndexOfAny to find first occurrence of character in array
+      Console.WriteLine("\nFirst 'c', 'a' or '$' is " +
+         "located at index " + letters.IndexOfAny(searchLetters));
+      Console.WriteLine("First 'c', 'a' or '$' starting at 7 is " +
+         "located at index " + letters.IndexOfAny(searchLetters, 7));
+      Console.WriteLine("First 'c', 'a' or '$' in the 5 positions " +
+         "starting at 7 is located at index " +
+         letters.IndexOfAny(searchLetters, 7, 5));
+
+      // test LastIndexOfAny to find last occurrence of character
+      // in array
+      Console.WriteLine("\nLast 'c', 'a' or '$' is " +
+         "located at index " + letters.LastIndexOfAny(searchLetters));
+      Console.WriteLine("Last 'c', 'a' or '$' up to position 1 is " +
+         "located at index " +
+         letters.LastIndexOfAny(searchLetters, 1));
+      Console.WriteLine("Last 'c', 'a' or '$' in the 5 positions " +
+         "ending at 25 is located at index " +
+         letters.LastIndexOfAny(searchLetters, 25, 5));
+   }
+```
 ---
 # Extracting substrings from `string`
 
+- Class `string` provides two Substring methods, which create a new string by copying part of an existing string.
+- Each method returns a new `string`
 ---
-# Misc. `string` methods
+# Extracting substrings from `string`
+```csharp
+static void Main()
+{
+  var letters = "abcdefghijklmabcdefghijklm";
+
+  // invoke Substring method and pass it one parameter
+  Console.WriteLine("Substring from index 20 to end is " +
+      $"\"{letters.Substring(20)}\"");
+
+  // invoke Substring method and pass it two parameters
+  Console.WriteLine("Substring from index 0 of length 6 is " +
+      $"\"{letters.Substring(0, 6)}\"");
+}
+```
+---
+# Comparing `string`
+- Class `string` provides several ways to compare strings.
+- Method `Equals`, method `CompareTo` and the equality operator (`==`)
+  - Use `==` for checking if two string references point to the same memory location.
+  - Use `.Equals` for comparing the actual content of strings.
+  - Use `.CompareTo` for determining the order of strings, especially when you need to sort 
+    ```csharp
+    string str1 = "apple";
+    string str2 = "banana";
+    int comparisonResult = str1.CompareTo(str2); // Returns a negative value since "apple" comes before "banana"
+     ```
+---
+# Comparing `string`
+```csharp
+static void Main()
+{
+  var string1 = "hello";
+  var string2 = "good bye";
+  var string3 = "Happy Birthday";
+  var string4 = "happy birthday";
+
+  // output values of four strings
+  Console.WriteLine($"string1 = \"{string1}\"" +
+      $"\nstring2 = \"{string2}\"" +
+      $"\nstring3 = \"{string3}\"" +
+      $"\nstring4 = \"{string4}\"\n");
+
+  // test for equality using Equals method
+  if (string1.Equals("hello"))
+  { 
+      Console.WriteLine("string1 equals \"hello\"");
+  }
+  else
+  { 
+      Console.WriteLine("string1 does not equal \"hello\"");
+  }
+
+  // test for equality with ==
+  if (string1 == "hello")
+  {
+      Console.WriteLine("string1 equals \"hello\"");
+  }
+  else
+  {
+      Console.WriteLine("string1 does not equal \"hello\"");
+  }
+
+  // test for equality comparing case
+  if (string.Equals(string3, string4)) // static method
+  {
+      Console.WriteLine("string3 equals string4");
+  }
+  else
+  {
+      Console.WriteLine("string3 does not equal string4");
+  }
+
+  // test CompareTo
+  Console.WriteLine(
+      $"\nstring1.CompareTo(string2) is {string1.CompareTo(string2)}");
+  Console.WriteLine(
+      $"string2.CompareTo(string1) is {string2.CompareTo(string1)}");
+  Console.WriteLine(
+      $"string1.CompareTo(string1) is {string1.CompareTo(string1)}");
+  Console.WriteLine(
+      $"string3.CompareTo(string4) is {string3.CompareTo(string4)}");
+  Console.WriteLine(
+      $"string4.CompareTo(string3) is {string4.CompareTo(string3)}");
+}
+```
+---
+# Comparing `string`
+![Alt text](image-2.png)
 
 ---
 # StringBuilder
+- String is an immutable type. That is, each operation that appears to modify a String object actually creates a new string.
+  - Example: If you call `String.Concat`, what happens is memory allocated, new value put into memory, and variable reassigned the new memory location. Original never changed.
 
-https://learn.microsoft.com/en-us/dotnet/api/system.text.stringbuilder?view=net-7.0#HowWorks
+- For routines that perform extensive string manipulation (such as apps that modify a string numerous times in a loop), modifying a string repeatedly can exact a significant performance penalty.
 
+- The alternative is to use `StringBuilder`
+
+ref: https://learn.microsoft.com/en-us/dotnet/api/system.text.stringbuilder?view=net-7.0#HowWorks
+
+---
+# StringBuilder
+```csharp
+using System;
+using System.Reflection;
+using System.Text;
+
+public class Example
+{
+   public static void Main()
+   {
+      StringBuilder sb = new StringBuilder();
+      ShowSBInfo(sb);
+      sb.Append("This is a sentence.");
+      ShowSBInfo(sb);
+      for (int ctr = 0; ctr <= 10; ctr++) {
+         sb.Append("This is an additional sentence.");
+         ShowSBInfo(sb);
+      }   
+   }
+   
+   private static void ShowSBInfo(StringBuilder sb)
+   {
+      foreach (var prop in sb.GetType().GetProperties()) {
+         if (prop.GetIndexParameters().Length == 0)
+            Console.Write("{0}: {1:N0}    ", prop.Name, prop.GetValue(sb));
+      }
+      Console.WriteLine();
+   }
+}
+// The example displays the following output:
+//    Capacity: 16    MaxCapacity: 2,147,483,647    Length: 0
+//    Capacity: 32    MaxCapacity: 2,147,483,647    Length: 19
+//    Capacity: 64    MaxCapacity: 2,147,483,647    Length: 50
+//    Capacity: 128    MaxCapacity: 2,147,483,647    Length: 81
+```
+---
+# StringBuilder
+
+- Every StringBuilder can store a certain number of characters that’s specified by its capacity.
+- Exceeding the capacity of a StringBuilder causes the capacity to expand to accommodate the additional characters
+
+---
+
+# Misc. `string` methods
+
+- Class string provides several methods that return modified copies of strings.
+  - `Replace`
+  - `ToLower`
+  - `ToUpper`
+  - `Trim`
 --- 
+# Misc. `string` methods
+```csharp
+  static void Main()
+   {
+      var string1 = "cheers!";
+      var string2 = "GOOD BYE ";
+      var string3 = "   spaces   ";
+
+      Console.WriteLine($"string1 = \"{string1}\"\n" +
+         $"string2 = \"{string2}\"\n" +
+         $"string3 = \"{string3}\"");
+
+      // call method Replace
+      Console.WriteLine("\nReplacing \"e\" with \"E\" in string1: " +
+         $"\"{string1.Replace('e', 'E')}\"");
+
+      // call ToLower and ToUpper
+      Console.WriteLine(
+         $"\nstring1.ToUpper() = \"{string1.ToUpper()}\"" +
+         $"\nstring2.ToLower() = \"{string2.ToLower()}\"");
+
+      // call Trim method
+      Console.WriteLine(
+         $"\nstring3 after trim = \"{string3.Trim()}\"");
+
+      Console.WriteLine($"\nstring1 = \"{string1}\"");
+   }
+```
+---
 # `char` methods
 
+- Class char provides useful method to help in conversions on characters
+
+```csharp
+ static void Main(string[] args)
+  {
+    Console.Write("Enter a character: ");
+    var character = char.Parse(Console.ReadLine());
+
+    Console.WriteLine($"is digit: {char.IsDigit(character)}");
+    Console.WriteLine($"is letter: {char.IsLetter(character)}");
+    Console.WriteLine(
+        $"is letter or digit: {char.IsLetterOrDigit(character)}");
+    Console.WriteLine($"is lower case: {char.IsLower(character)}");
+    Console.WriteLine($"is upper case: {char.IsUpper(character)}");
+    Console.WriteLine($"to upper case: {char.ToUpper(character)}");
+    Console.WriteLine($"to lower case: {char.ToLower(character)}");
+    Console.WriteLine(
+        $"is punctuation: {char.IsPunctuation(character)}");
+    Console.WriteLine($"is symbol: {char.IsSymbol(character)}");
+  }
+```
 ---
 # Files and Streams
 
@@ -84,9 +415,6 @@ https://learn.microsoft.com/en-us/dotnet/api/system.text.stringbuilder?view=net-
 
 ---
 # Classes File and Directory
-
----
-# Delegates and Events
 
 
 --- 
