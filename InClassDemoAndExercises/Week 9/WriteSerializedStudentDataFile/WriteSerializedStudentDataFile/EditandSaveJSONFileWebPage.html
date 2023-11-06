@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit and Save JSON File</title>
+</head>
+<body>
+    <h1>Edit JSON Data:</h1>
+    <textarea id="jsonData" rows="10" cols="50"></textarea>
+    <input type="file" id="fileInput">
+    <button id="saveButton">Save</button>
+
+    <script>
+        const jsonDataTextarea = document.getElementById('jsonData');
+        const fileInput = document.getElementById('fileInput');
+        const saveButton = document.getElementById('saveButton');
+
+        // Function to handle file input and read JSON file
+        fileInput.addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const fileContent = e.target.result;
+                    jsonDataTextarea.value = fileContent;
+                };
+                reader.readAsText(file);
+            }
+        });
+
+        // Function to save JSON data to a file
+        saveButton.addEventListener('click', function () {
+            const jsonData = jsonDataTextarea.value;
+            const blob = new Blob([jsonData], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = url;
+            a.download = 'edited.json';
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+        });
+    </script>
+</body>
+</html>
