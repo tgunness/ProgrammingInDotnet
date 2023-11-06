@@ -26,7 +26,7 @@ img[alt~="center"] {
 - Week 7 - Midterm
 - Week 8 Part 1 - Strings, Characters, Files & Streams, Serialization
 - Week 8 Part 2 - Gaming I
-- **Week 9 Part 1 - Serialization, Classes File and Directory**
+- **Week 9 Part 1 - Serialization, Classes File and Directory, Searching and Sorting**
 ---
 
 # Today
