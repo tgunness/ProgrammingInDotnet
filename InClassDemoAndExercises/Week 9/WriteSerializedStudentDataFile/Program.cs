@@ -9,16 +9,31 @@ namespace WriteSerializedStudentDataFile
     {
         static void Main(string[] args)
         {
-            var data = new SchoolDataSource();
-            var collegePrograms = data.GenerateCollegePrograms();
+            var dataSource = new SchoolDataSource();
+            var collegePrograms = dataSource.GenerateCollegePrograms();
 
-            string jsonString = JsonSerializer.Serialize(collegePrograms);
+            var serializerOptions = new JsonSerializerOptions()
+            {
+                WriteIndented = true     
+            };
 
-            string filePath = "c:\\temp\\collegePrograms.json";
+            var jsonString = JsonSerializer.Serialize(collegePrograms, serializerOptions);
+
+            var filePath = "c:\\temp\\collegePrograms.json";
 
             File.WriteAllText(filePath, jsonString);
 
+            Console.WriteLine("Open file!");
+            Console.ReadLine();
             #region snippets
+            //var data = new SchoolDataSource();
+            //var collegePrograms = data.GenerateCollegePrograms();
+
+            //string jsonString = JsonSerializer.Serialize(collegePrograms);
+
+            //string filePath = "c:\\temp\\collegePrograms.json";
+
+            //File.WriteAllText(filePath, jsonString);
             //var serializationOptions = new JsonSerializerOptions()
             //{
             //    WriteIndented = true

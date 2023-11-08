@@ -14,13 +14,15 @@ public class Program
         List<Person> people = new List<Person>
         {
             new Person { Name = "Alice", Age = 25 },
-            new Person { Name = "Bob", Age = 30 },
             new Person { Name = "Charlie", Age = 22 },
-            new Person { Name = "David", Age = 28 }
+            new Person { Name = "David", Age = 28 },
+            new Person { Name = "Bob", Age = 30 }
         };
 
         // Sort the list of Person objects by Name using the Sort() method with a lambda expression
-        people.Sort((person1, person2) => person1.Name.CompareTo(person2.Name));
+        people.Sort((person1, person2) => person1.Age.CompareTo(person2.Age));
+
+
 
         // Display the sorted list
         foreach (var person in people)

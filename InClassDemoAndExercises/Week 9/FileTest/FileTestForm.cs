@@ -99,7 +99,12 @@ namespace FileTest
          outputTextBox.AppendText(
             $"Last accessed: {File.GetLastAccessTime(fileName)}" +
             Environment.NewLine);
-      }
+
+            outputTextBox.AppendText(
+            $"Attributes: {File.GetAttributes(fileName)}" +
+            Environment.NewLine);
+
+        }
    }
 }
 
