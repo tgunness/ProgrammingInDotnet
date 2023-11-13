@@ -193,6 +193,45 @@ Implement a generic data repository that can store and retrieve objects of diffe
 
 6. Ensure that the generic class is flexible enough to handle various data types.
 
+---
+# Example
+
+```csharp
+class Program
+{
+    static void Main()
+    {
+        // Instantiate DataRepository for Person
+        DataRepository<Person> personRepository = new DataRepository<Person>();
+
+        // Add Person objects to the repository
+        personRepository.AddItem(new Person { Id = 1, Name = "Alice", Age = 25 });
+        personRepository.AddItem(new Person { Id = 2, Name = "Bob", Age = 30 });
+
+        // Display Person objects
+        Console.WriteLine("Person Repository:");
+        personRepository.DisplayItems();
+
+        // Instantiate DataRepository for other data type(s)
+        // ...
+
+        // Add items of other data type(s) to the repository
+        // ...
+
+        // Display items of other data type(s)
+        // ...
+
+        Console.ReadLine();
+    }
+}
+
+class Person
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
+```
 
 ---
 # Conclusion
