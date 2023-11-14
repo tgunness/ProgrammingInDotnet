@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week10.GenericBoxClass", "W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week10.GenericInterface", "Week10.GenericInterface\Week10.GenericInterface.csproj", "{22336471-A398-417F-B67B-950C87BF7508}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week10.GenericRepositoryExercise", "Week10.GenericDataRepository\Week10.GenericRepositoryExercise.csproj", "{EAD52E71-C717-4208-AC7A-9A3F96886180}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{22336471-A398-417F-B67B-950C87BF7508}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22336471-A398-417F-B67B-950C87BF7508}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22336471-A398-417F-B67B-950C87BF7508}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAD52E71-C717-4208-AC7A-9A3F96886180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAD52E71-C717-4208-AC7A-9A3F96886180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAD52E71-C717-4208-AC7A-9A3F96886180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAD52E71-C717-4208-AC7A-9A3F96886180}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
