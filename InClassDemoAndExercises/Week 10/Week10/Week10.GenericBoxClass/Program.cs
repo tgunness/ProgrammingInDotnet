@@ -21,6 +21,12 @@ namespace Week10.GenericBoxClass
             stringBox.AddItem("Hello, Generics!");
             string stringValue = stringBox.GetItem();  
             Console.WriteLine(stringValue); // stringValue will be "Hello, Generics!"
+
+            AnotherBox<int> anotherIntBox = new AnotherBox<int>();
+            Box<int> anotherBox2 = new AnotherBox<int>();
+
+            List<Box<int>> myListBoxes = new List<Box<int>>();
+
         }
     }
 }

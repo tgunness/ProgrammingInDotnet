@@ -28,5 +28,15 @@ namespace Week10.GenericInterface
 
             Console.ReadLine();
         }
+
+        public static T Max<T>(T a, T b) where T : IComparable<T>
+        {
+            var max = a;
+
+            if (a.CompareTo(b) > 0)
+                max = b;
+
+            return max;
+        }
     }
 }
