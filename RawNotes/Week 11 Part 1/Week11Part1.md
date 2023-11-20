@@ -40,15 +40,15 @@ img[alt~="center"] {
 
 ---
 
-![Alt text](image.png)
+![Alt text](Wee11.1-image.png)
 
 ---
-![Alt text](image-1.png)
+![Alt text](Wee11.1-image-1.png)
 
 ---
 
 
-![Alt text](image-2.png)
+![Alt text](Wee11.1-image-2.png)
 
 ---
 <style scoped>section { font-size: 25px; }</style>
@@ -62,7 +62,7 @@ img[alt~="center"] {
 <style scoped>section { font-size: 23px; }</style>
 
 # Data Bound C# Form Controls
-![Alt text](image-4.png)
+![Alt text](Wee11.1-image-4.png)
 - C# provides technique called data binding to link data to controls on Forms
 - Components:
     - **Data Source** - usually a DB (could also be textfile, spreadsheet, webservices, etc.)
@@ -87,7 +87,7 @@ img[alt~="center"] {
 
 # Excerise
 
-![Alt text](image-6.png)
+![Alt text](Wee11.1-image-6.png)
 
 
 ---
