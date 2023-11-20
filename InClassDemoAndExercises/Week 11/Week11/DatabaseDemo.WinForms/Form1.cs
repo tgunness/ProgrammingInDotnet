@@ -21,10 +21,14 @@ namespace DatabaseDemo.WinForms
         {
             // TODO: This line of code loads data into the 'northwindDataSet.Customers' table. You can move, or remove it, as needed.
             this.customersTableAdapter.Fill(this.northwindDataSet.Customers);
-            // TODO: This line of code loads data into the 'northwindDataSet.Customers' table. You can move, or remove it, as needed.
-            this.customersTableAdapter.Fill(this.northwindDataSet.Customers);
+
 
         }
 
+
+        public void ExecuteQuery(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
