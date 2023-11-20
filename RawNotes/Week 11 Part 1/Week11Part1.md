@@ -53,7 +53,7 @@ img[alt~="center"] {
 ---
 <style scoped>section { font-size: 25px; }</style>
 
-![bg left 100%](image-3.png)
+![bg left 100%](Wee11.1-image-3.png)
 
 - Relationships!
 - Avoids redundancy
