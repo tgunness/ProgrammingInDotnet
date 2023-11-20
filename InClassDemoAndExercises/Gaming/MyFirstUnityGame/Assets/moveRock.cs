@@ -46,6 +46,11 @@ public class moveRock : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Hit Something!");
+
+        if(collision.gameObject.tag == "ship")
+        {
+            Debug.Log("Hit Something!");
+        }
+        
     }
 }

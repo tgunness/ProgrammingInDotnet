@@ -14,6 +14,13 @@ public class mainLoop : MonoBehaviour
     public int currentRocks = 0;
     public int frequency;
 
+    public GameObject Shot;
+    public int maxShots;
+    private int currentShots;
+
+    public GameObject starfield_a;
+    public GameObject starfield_b;
+    private int starfieldSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,16 +35,20 @@ public class mainLoop : MonoBehaviour
         boundary.x = boundary.x - shipXHalf;
         boundary.y = boundary.y - shipYHalf;
 
+        maxShots = 10;
+        currentShots = 0;
+
+        starfieldSpeed = 4;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.UpArrow) && Ship.transform.position.y < boundary.y)
+        if (Input.GetKey(KeyCode.UpArrow) && Ship.transform.position.y < boundary.y)
         {
             moveShip(new Vector2(0, 1));
         }
-        else if(Input.GetKey(KeyCode.DownArrow) && Ship.transform.position.y > -boundary.y)
+        else if (Input.GetKey(KeyCode.DownArrow) && Ship.transform.position.y > -boundary.y)
         {
             moveShip(new Vector2(0, -1));
         }
@@ -56,6 +67,14 @@ public class mainLoop : MonoBehaviour
             makeRock();
         }
 
+        if (Input.GetKey(KeyCode.Space) && currentShots < maxShots)
+        {
+            makeShot();
+        }
+
+
+        moveStarfield();
+
     }
 
     void moveShip(Vector2 direction)
@@ -73,6 +92,34 @@ public class mainLoop : MonoBehaviour
     public void removeRock()
     {
         currentRocks--;
+    }
+
+    public void makeShot()
+    {
+        GameObject temp = Instantiate(Shot);
+        temp.transform.position = Ship.transform.position;
+        currentShots++;
+    }
+
+    public void removeShot()
+    {
+        currentShots--;
+    }
+
+    public void moveStarfield()
+    {
+        if(starfield_a.transform.position.x < -29)
+        {
+            starfield_a.transform.Translate(new Vector2(60, 0));
+        }
+
+        if (starfield_b.transform.position.x < -29)
+        {
+            starfield_b.transform.Translate(new Vector2(60, 0));
+        }
+
+        starfield_a.transform.Translate(new Vector2(-1, 0) * starfieldSpeed * Time.deltaTime);
+        starfield_b.transform.Translate(new Vector2(-1, 0) * starfieldSpeed * Time.deltaTime);
     }
 
 }
