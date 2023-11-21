@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,6 +30,19 @@ namespace Week11InClassDemo
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void insertButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                customersTableAdapter.Insert(customerIDTextBox.Text, companyNameTextBox.Text, "123", "123", "123", "123", "123", "123", "123", "213", "123");
+                this.customersTableAdapter.Fill(this.northwind2DataSet.Customers);
+            }
+            catch(SqlException exception)
+            {
+                MessageBox.Show($"Try Again! error {exception.Message}");
+            }
         }
     }
 }

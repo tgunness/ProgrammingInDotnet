@@ -33,5 +33,16 @@ namespace Week11InClassDemo.Properties {
                 return ((string)(this["Northwind2ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Northwind.mdf" +
+            ";Integrated Security=True;Connect Timeout=30")]
+        public string NorthwindConnectionString {
+            get {
+                return ((string)(this["NorthwindConnectionString"]));
+            }
+        }
     }
 }
