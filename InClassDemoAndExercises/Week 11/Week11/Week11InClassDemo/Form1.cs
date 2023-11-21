@@ -36,13 +36,51 @@ namespace Week11InClassDemo
         {
             try
             {
-                customersTableAdapter.Insert(customerIDTextBox.Text, companyNameTextBox.Text, "123", "123", "123", "123", "123", "123", "123", "213", "123");
+                customersTableAdapter.Insert(customerIDTextBox.Text,
+                    companyNameTextBox.Text, 
+                    contactNameTextBox.Text, 
+                    contactTitleTextBox.Text, 
+                    addressTextBox.Text, 
+                    cityTextBox.Text, 
+                    regionTextBox.Text, 
+                    postalCodeTextBox.Text, 
+                    countryTextBox.Text, 
+                    phoneTextBox.Text, 
+                    faxTextBox.Text);
                 this.customersTableAdapter.Fill(this.northwind2DataSet.Customers);
             }
-            catch(SqlException exception)
+            catch (SqlException exception)
             {
                 MessageBox.Show($"Try Again! error {exception.Message}");
             }
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            foreach(var control in customerDetailGroup.Controls.OfType<TextBox>().ToList())
+            {
+                control.Text = "";
+            }
+        }
+
+        private void customerDetailGroup_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            customersTableAdapter.Delete(customerIDTextBox.Text,
+                    companyNameTextBox.Text,
+                    contactNameTextBox.Text,
+                    contactTitleTextBox.Text,
+                    addressTextBox.Text,
+                    cityTextBox.Text,
+                    regionTextBox.Text,
+                    postalCodeTextBox.Text,
+                    countryTextBox.Text,
+                    phoneTextBox.Text,
+                    faxTextBox.Text);
         }
     }
 }
