@@ -16,7 +16,7 @@ namespace Week11InClassDemo.ADOnet
             string connectionString = "server=.\\SQLEXPRESS;Database=Northwind2;User Id=sa;Password=Password01!";
 
             ////IF USING WINDOWS AUTH, then connection string should be something like this:
-            //string connectionString = "server=.\\SQLEXPRESS;Trusted_Connection=yes;database=Northwind2";
+            //string connectionStringWindowsAuth = "server=.\\SQLEXPRESS;Trusted_Connection=yes;database=Northwind2";
 
             // create the string to hold the SQL command 
             // to get records from the Customers table
