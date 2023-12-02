@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace MockExam.InClassDemo {
+namespace MyMockSolutionWinFormQuestion2 {
     
     
     /// <summary>
@@ -20,9 +20,9 @@ namespace MockExam.InClassDemo {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("Northwind2DataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("NorthWind3DataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class Northwind2DataSet : global::System.Data.DataSet {
+    public partial class NorthWind3DataSet : global::System.Data.DataSet {
         
         private CategoriesDataTable tableCategories;
         
@@ -36,7 +36,7 @@ namespace MockExam.InClassDemo {
         
         private EmployeeTerritoriesDataTable tableEmployeeTerritories;
         
-        private OrderDetailsDataTable tableOrderDetails;
+        private Order_DetailsDataTable tableOrder_Details;
         
         private OrdersDataTable tableOrders;
         
@@ -80,7 +80,7 @@ namespace MockExam.InClassDemo {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public Northwind2DataSet() {
+        public NorthWind3DataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -91,7 +91,7 @@ namespace MockExam.InClassDemo {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected Northwind2DataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected NorthWind3DataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -122,8 +122,8 @@ namespace MockExam.InClassDemo {
                 if ((ds.Tables["EmployeeTerritories"] != null)) {
                     base.Tables.Add(new EmployeeTerritoriesDataTable(ds.Tables["EmployeeTerritories"]));
                 }
-                if ((ds.Tables["OrderDetails"] != null)) {
-                    base.Tables.Add(new OrderDetailsDataTable(ds.Tables["OrderDetails"]));
+                if ((ds.Tables["Order Details"] != null)) {
+                    base.Tables.Add(new Order_DetailsDataTable(ds.Tables["Order Details"]));
                 }
                 if ((ds.Tables["Orders"] != null)) {
                     base.Tables.Add(new OrdersDataTable(ds.Tables["Orders"]));
@@ -225,9 +225,9 @@ namespace MockExam.InClassDemo {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public OrderDetailsDataTable OrderDetails {
+        public Order_DetailsDataTable Order_Details {
             get {
-                return this.tableOrderDetails;
+                return this.tableOrder_Details;
             }
         }
         
@@ -333,7 +333,7 @@ namespace MockExam.InClassDemo {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            Northwind2DataSet cln = ((Northwind2DataSet)(base.Clone()));
+            NorthWind3DataSet cln = ((NorthWind3DataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -376,8 +376,8 @@ namespace MockExam.InClassDemo {
                 if ((ds.Tables["EmployeeTerritories"] != null)) {
                     base.Tables.Add(new EmployeeTerritoriesDataTable(ds.Tables["EmployeeTerritories"]));
                 }
-                if ((ds.Tables["OrderDetails"] != null)) {
-                    base.Tables.Add(new OrderDetailsDataTable(ds.Tables["OrderDetails"]));
+                if ((ds.Tables["Order Details"] != null)) {
+                    base.Tables.Add(new Order_DetailsDataTable(ds.Tables["Order Details"]));
                 }
                 if ((ds.Tables["Orders"] != null)) {
                     base.Tables.Add(new OrdersDataTable(ds.Tables["Orders"]));
@@ -466,10 +466,10 @@ namespace MockExam.InClassDemo {
                     this.tableEmployeeTerritories.InitVars();
                 }
             }
-            this.tableOrderDetails = ((OrderDetailsDataTable)(base.Tables["OrderDetails"]));
+            this.tableOrder_Details = ((Order_DetailsDataTable)(base.Tables["Order Details"]));
             if ((initTable == true)) {
-                if ((this.tableOrderDetails != null)) {
-                    this.tableOrderDetails.InitVars();
+                if ((this.tableOrder_Details != null)) {
+                    this.tableOrder_Details.InitVars();
                 }
             }
             this.tableOrders = ((OrdersDataTable)(base.Tables["Orders"]));
@@ -526,9 +526,9 @@ namespace MockExam.InClassDemo {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "Northwind2DataSet";
+            this.DataSetName = "NorthWind3DataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/Northwind2DataSet.xsd";
+            this.Namespace = "http://tempuri.org/NorthWind3DataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableCategories = new CategoriesDataTable();
@@ -543,8 +543,8 @@ namespace MockExam.InClassDemo {
             base.Tables.Add(this.tableEmployees);
             this.tableEmployeeTerritories = new EmployeeTerritoriesDataTable();
             base.Tables.Add(this.tableEmployeeTerritories);
-            this.tableOrderDetails = new OrderDetailsDataTable();
-            base.Tables.Add(this.tableOrderDetails);
+            this.tableOrder_Details = new Order_DetailsDataTable();
+            base.Tables.Add(this.tableOrder_Details);
             this.tableOrders = new OrdersDataTable();
             base.Tables.Add(this.tableOrders);
             this.tableProducts = new ProductsDataTable();
@@ -579,11 +579,11 @@ namespace MockExam.InClassDemo {
             this.Relations.Add(this.relationFK_EmployeeTerritories_Territories);
             this.relationFK_Order_Details_Orders = new global::System.Data.DataRelation("FK_Order_Details_Orders", new global::System.Data.DataColumn[] {
                         this.tableOrders.OrderIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOrderDetails.OrderIDColumn}, false);
+                        this.tableOrder_Details.OrderIDColumn}, false);
             this.Relations.Add(this.relationFK_Order_Details_Orders);
             this.relationFK_Order_Details_Products = new global::System.Data.DataRelation("FK_Order_Details_Products", new global::System.Data.DataColumn[] {
                         this.tableProducts.ProductIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOrderDetails.ProductIDColumn}, false);
+                        this.tableOrder_Details.ProductIDColumn}, false);
             this.Relations.Add(this.relationFK_Order_Details_Products);
             this.relationFK_Orders_Customers = new global::System.Data.DataRelation("FK_Orders_Customers", new global::System.Data.DataColumn[] {
                         this.tableCustomers.CustomerIDColumn}, new global::System.Data.DataColumn[] {
@@ -649,7 +649,7 @@ namespace MockExam.InClassDemo {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeOrderDetails() {
+        private bool ShouldSerializeOrder_Details() {
             return false;
         }
         
@@ -700,7 +700,7 @@ namespace MockExam.InClassDemo {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            Northwind2DataSet ds = new Northwind2DataSet();
+            NorthWind3DataSet ds = new NorthWind3DataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -763,7 +763,7 @@ namespace MockExam.InClassDemo {
         public delegate void EmployeeTerritoriesRowChangeEventHandler(object sender, EmployeeTerritoriesRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void OrderDetailsRowChangeEventHandler(object sender, OrderDetailsRowChangeEvent e);
+        public delegate void Order_DetailsRowChangeEventHandler(object sender, Order_DetailsRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void OrdersRowChangeEventHandler(object sender, OrdersRowChangeEvent e);
@@ -1031,7 +1031,7 @@ namespace MockExam.InClassDemo {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Northwind2DataSet ds = new Northwind2DataSet();
+                NorthWind3DataSet ds = new NorthWind3DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1313,7 +1313,7 @@ namespace MockExam.InClassDemo {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Northwind2DataSet ds = new Northwind2DataSet();
+                NorthWind3DataSet ds = new NorthWind3DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1587,7 +1587,7 @@ namespace MockExam.InClassDemo {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Northwind2DataSet ds = new Northwind2DataSet();
+                NorthWind3DataSet ds = new NorthWind3DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1997,7 +1997,7 @@ namespace MockExam.InClassDemo {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Northwind2DataSet ds = new Northwind2DataSet();
+                NorthWind3DataSet ds = new NorthWind3DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2532,7 +2532,7 @@ namespace MockExam.InClassDemo {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Northwind2DataSet ds = new Northwind2DataSet();
+                NorthWind3DataSet ds = new NorthWind3DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2813,7 +2813,7 @@ namespace MockExam.InClassDemo {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Northwind2DataSet ds = new Northwind2DataSet();
+                NorthWind3DataSet ds = new NorthWind3DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2877,7 +2877,7 @@ namespace MockExam.InClassDemo {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class OrderDetailsDataTable : global::System.Data.TypedTableBase<OrderDetailsRow> {
+        public partial class Order_DetailsDataTable : global::System.Data.TypedTableBase<Order_DetailsRow> {
             
             private global::System.Data.DataColumn columnOrderID;
             
@@ -2891,8 +2891,8 @@ namespace MockExam.InClassDemo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OrderDetailsDataTable() {
-                this.TableName = "OrderDetails";
+            public Order_DetailsDataTable() {
+                this.TableName = "Order Details";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2900,7 +2900,7 @@ namespace MockExam.InClassDemo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal OrderDetailsDataTable(global::System.Data.DataTable table) {
+            internal Order_DetailsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2917,7 +2917,7 @@ namespace MockExam.InClassDemo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected OrderDetailsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected Order_DetailsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -2973,34 +2973,34 @@ namespace MockExam.InClassDemo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OrderDetailsRow this[int index] {
+            public Order_DetailsRow this[int index] {
                 get {
-                    return ((OrderDetailsRow)(this.Rows[index]));
+                    return ((Order_DetailsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event OrderDetailsRowChangeEventHandler OrderDetailsRowChanging;
+            public event Order_DetailsRowChangeEventHandler Order_DetailsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event OrderDetailsRowChangeEventHandler OrderDetailsRowChanged;
+            public event Order_DetailsRowChangeEventHandler Order_DetailsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event OrderDetailsRowChangeEventHandler OrderDetailsRowDeleting;
+            public event Order_DetailsRowChangeEventHandler Order_DetailsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event OrderDetailsRowChangeEventHandler OrderDetailsRowDeleted;
+            public event Order_DetailsRowChangeEventHandler Order_DetailsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddOrderDetailsRow(OrderDetailsRow row) {
+            public void AddOrder_DetailsRow(Order_DetailsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OrderDetailsRow AddOrderDetailsRow(OrdersRow parentOrdersRowByFK_Order_Details_Orders, ProductsRow parentProductsRowByFK_Order_Details_Products, decimal UnitPrice, short Quantity, float Discount) {
-                OrderDetailsRow rowOrderDetailsRow = ((OrderDetailsRow)(this.NewRow()));
+            public Order_DetailsRow AddOrder_DetailsRow(OrdersRow parentOrdersRowByFK_Order_Details_Orders, ProductsRow parentProductsRowByFK_Order_Details_Products, decimal UnitPrice, short Quantity, float Discount) {
+                Order_DetailsRow rowOrder_DetailsRow = ((Order_DetailsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
@@ -3013,15 +3013,15 @@ namespace MockExam.InClassDemo {
                 if ((parentProductsRowByFK_Order_Details_Products != null)) {
                     columnValuesArray[1] = parentProductsRowByFK_Order_Details_Products[0];
                 }
-                rowOrderDetailsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowOrderDetailsRow);
-                return rowOrderDetailsRow;
+                rowOrder_DetailsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowOrder_DetailsRow);
+                return rowOrder_DetailsRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OrderDetailsRow FindByOrderIDProductID(int OrderID, int ProductID) {
-                return ((OrderDetailsRow)(this.Rows.Find(new object[] {
+            public Order_DetailsRow FindByOrderIDProductID(int OrderID, int ProductID) {
+                return ((Order_DetailsRow)(this.Rows.Find(new object[] {
                             OrderID,
                             ProductID})));
             }
@@ -3029,7 +3029,7 @@ namespace MockExam.InClassDemo {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                OrderDetailsDataTable cln = ((OrderDetailsDataTable)(base.Clone()));
+                Order_DetailsDataTable cln = ((Order_DetailsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -3037,7 +3037,7 @@ namespace MockExam.InClassDemo {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new OrderDetailsDataTable();
+                return new Order_DetailsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3075,28 +3075,28 @@ namespace MockExam.InClassDemo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OrderDetailsRow NewOrderDetailsRow() {
-                return ((OrderDetailsRow)(this.NewRow()));
+            public Order_DetailsRow NewOrder_DetailsRow() {
+                return ((Order_DetailsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new OrderDetailsRow(builder);
+                return new Order_DetailsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(OrderDetailsRow);
+                return typeof(Order_DetailsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.OrderDetailsRowChanged != null)) {
-                    this.OrderDetailsRowChanged(this, new OrderDetailsRowChangeEvent(((OrderDetailsRow)(e.Row)), e.Action));
+                if ((this.Order_DetailsRowChanged != null)) {
+                    this.Order_DetailsRowChanged(this, new Order_DetailsRowChangeEvent(((Order_DetailsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3104,8 +3104,8 @@ namespace MockExam.InClassDemo {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.OrderDetailsRowChanging != null)) {
-                    this.OrderDetailsRowChanging(this, new OrderDetailsRowChangeEvent(((OrderDetailsRow)(e.Row)), e.Action));
+                if ((this.Order_DetailsRowChanging != null)) {
+                    this.Order_DetailsRowChanging(this, new Order_DetailsRowChangeEvent(((Order_DetailsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3113,8 +3113,8 @@ namespace MockExam.InClassDemo {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.OrderDetailsRowDeleted != null)) {
-                    this.OrderDetailsRowDeleted(this, new OrderDetailsRowChangeEvent(((OrderDetailsRow)(e.Row)), e.Action));
+                if ((this.Order_DetailsRowDeleted != null)) {
+                    this.Order_DetailsRowDeleted(this, new Order_DetailsRowChangeEvent(((Order_DetailsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3122,14 +3122,14 @@ namespace MockExam.InClassDemo {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.OrderDetailsRowDeleting != null)) {
-                    this.OrderDetailsRowDeleting(this, new OrderDetailsRowChangeEvent(((OrderDetailsRow)(e.Row)), e.Action));
+                if ((this.Order_DetailsRowDeleting != null)) {
+                    this.Order_DetailsRowDeleting(this, new Order_DetailsRowChangeEvent(((Order_DetailsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveOrderDetailsRow(OrderDetailsRow row) {
+            public void RemoveOrder_DetailsRow(Order_DetailsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -3138,7 +3138,7 @@ namespace MockExam.InClassDemo {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Northwind2DataSet ds = new Northwind2DataSet();
+                NorthWind3DataSet ds = new NorthWind3DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3156,7 +3156,7 @@ namespace MockExam.InClassDemo {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "OrderDetailsDataTable";
+                attribute2.FixedValue = "Order_DetailsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3598,7 +3598,7 @@ namespace MockExam.InClassDemo {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Northwind2DataSet ds = new Northwind2DataSet();
+                NorthWind3DataSet ds = new NorthWind3DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3996,7 +3996,7 @@ namespace MockExam.InClassDemo {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Northwind2DataSet ds = new Northwind2DataSet();
+                NorthWind3DataSet ds = new NorthWind3DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4270,7 +4270,7 @@ namespace MockExam.InClassDemo {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Northwind2DataSet ds = new Northwind2DataSet();
+                NorthWind3DataSet ds = new NorthWind3DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4563,7 +4563,7 @@ namespace MockExam.InClassDemo {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Northwind2DataSet ds = new Northwind2DataSet();
+                NorthWind3DataSet ds = new NorthWind3DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4991,7 +4991,7 @@ namespace MockExam.InClassDemo {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Northwind2DataSet ds = new Northwind2DataSet();
+                NorthWind3DataSet ds = new NorthWind3DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -5284,7 +5284,7 @@ namespace MockExam.InClassDemo {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Northwind2DataSet ds = new Northwind2DataSet();
+                NorthWind3DataSet ds = new NorthWind3DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -6456,25 +6456,25 @@ namespace MockExam.InClassDemo {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class OrderDetailsRow : global::System.Data.DataRow {
+        public partial class Order_DetailsRow : global::System.Data.DataRow {
             
-            private OrderDetailsDataTable tableOrderDetails;
+            private Order_DetailsDataTable tableOrder_Details;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal OrderDetailsRow(global::System.Data.DataRowBuilder rb) : 
+            internal Order_DetailsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableOrderDetails = ((OrderDetailsDataTable)(this.Table));
+                this.tableOrder_Details = ((Order_DetailsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int OrderID {
                 get {
-                    return ((int)(this[this.tableOrderDetails.OrderIDColumn]));
+                    return ((int)(this[this.tableOrder_Details.OrderIDColumn]));
                 }
                 set {
-                    this[this.tableOrderDetails.OrderIDColumn] = value;
+                    this[this.tableOrder_Details.OrderIDColumn] = value;
                 }
             }
             
@@ -6482,10 +6482,10 @@ namespace MockExam.InClassDemo {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int ProductID {
                 get {
-                    return ((int)(this[this.tableOrderDetails.ProductIDColumn]));
+                    return ((int)(this[this.tableOrder_Details.ProductIDColumn]));
                 }
                 set {
-                    this[this.tableOrderDetails.ProductIDColumn] = value;
+                    this[this.tableOrder_Details.ProductIDColumn] = value;
                 }
             }
             
@@ -6493,10 +6493,10 @@ namespace MockExam.InClassDemo {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public decimal UnitPrice {
                 get {
-                    return ((decimal)(this[this.tableOrderDetails.UnitPriceColumn]));
+                    return ((decimal)(this[this.tableOrder_Details.UnitPriceColumn]));
                 }
                 set {
-                    this[this.tableOrderDetails.UnitPriceColumn] = value;
+                    this[this.tableOrder_Details.UnitPriceColumn] = value;
                 }
             }
             
@@ -6504,10 +6504,10 @@ namespace MockExam.InClassDemo {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public short Quantity {
                 get {
-                    return ((short)(this[this.tableOrderDetails.QuantityColumn]));
+                    return ((short)(this[this.tableOrder_Details.QuantityColumn]));
                 }
                 set {
-                    this[this.tableOrderDetails.QuantityColumn] = value;
+                    this[this.tableOrder_Details.QuantityColumn] = value;
                 }
             }
             
@@ -6515,10 +6515,10 @@ namespace MockExam.InClassDemo {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public float Discount {
                 get {
-                    return ((float)(this[this.tableOrderDetails.DiscountColumn]));
+                    return ((float)(this[this.tableOrder_Details.DiscountColumn]));
                 }
                 set {
-                    this[this.tableOrderDetails.DiscountColumn] = value;
+                    this[this.tableOrder_Details.DiscountColumn] = value;
                 }
             }
             
@@ -6969,12 +6969,12 @@ namespace MockExam.InClassDemo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OrderDetailsRow[] GetOrderDetailsRows() {
+            public Order_DetailsRow[] GetOrder_DetailsRows() {
                 if ((this.Table.ChildRelations["FK_Order_Details_Orders"] == null)) {
-                    return new OrderDetailsRow[0];
+                    return new Order_DetailsRow[0];
                 }
                 else {
-                    return ((OrderDetailsRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Order_Details_Orders"])));
+                    return ((Order_DetailsRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Order_Details_Orders"])));
                 }
             }
         }
@@ -7246,12 +7246,12 @@ namespace MockExam.InClassDemo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OrderDetailsRow[] GetOrderDetailsRows() {
+            public Order_DetailsRow[] GetOrder_DetailsRows() {
                 if ((this.Table.ChildRelations["FK_Order_Details_Products"] == null)) {
-                    return new OrderDetailsRow[0];
+                    return new Order_DetailsRow[0];
                 }
                 else {
-                    return ((OrderDetailsRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Order_Details_Products"])));
+                    return ((Order_DetailsRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Order_Details_Products"])));
                 }
             }
         }
@@ -7986,22 +7986,22 @@ namespace MockExam.InClassDemo {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class OrderDetailsRowChangeEvent : global::System.EventArgs {
+        public class Order_DetailsRowChangeEvent : global::System.EventArgs {
             
-            private OrderDetailsRow eventRow;
+            private Order_DetailsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OrderDetailsRowChangeEvent(OrderDetailsRow row, global::System.Data.DataRowAction action) {
+            public Order_DetailsRowChangeEvent(Order_DetailsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OrderDetailsRow Row {
+            public Order_DetailsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -8221,7 +8221,7 @@ namespace MockExam.InClassDemo {
         }
     }
 }
-namespace MockExam.InClassDemo.Northwind2DataSetTableAdapters {
+namespace MyMockSolutionWinFormQuestion2.NorthWind3DataSetTableAdapters {
     
     
     /// <summary>
@@ -8383,7 +8383,7 @@ SELECT CategoryID, CategoryName, Description, Picture FROM Categories WHERE (Cat
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::MockExam.InClassDemo.Properties.Settings.Default.Northwind2ConnectionString;
+            this._connection.ConnectionString = global::MyMockSolutionWinFormQuestion2.Properties.Settings.Default.NorthWind3ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8400,7 +8400,7 @@ SELECT CategoryID, CategoryName, Description, Picture FROM Categories WHERE (Cat
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Northwind2DataSet.CategoriesDataTable dataTable) {
+        public virtual int Fill(NorthWind3DataSet.CategoriesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8413,9 +8413,9 @@ SELECT CategoryID, CategoryName, Description, Picture FROM Categories WHERE (Cat
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Northwind2DataSet.CategoriesDataTable GetData() {
+        public virtual NorthWind3DataSet.CategoriesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Northwind2DataSet.CategoriesDataTable dataTable = new Northwind2DataSet.CategoriesDataTable();
+            NorthWind3DataSet.CategoriesDataTable dataTable = new NorthWind3DataSet.CategoriesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8423,14 +8423,14 @@ SELECT CategoryID, CategoryName, Description, Picture FROM Categories WHERE (Cat
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet.CategoriesDataTable dataTable) {
+        public virtual int Update(NorthWind3DataSet.CategoriesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet dataSet) {
+        public virtual int Update(NorthWind3DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Categories");
         }
         
@@ -8727,7 +8727,7 @@ SELECT CustomerID, CustomerTypeID FROM CustomerCustomerDemo WHERE (CustomerID = 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::MockExam.InClassDemo.Properties.Settings.Default.Northwind2ConnectionString;
+            this._connection.ConnectionString = global::MyMockSolutionWinFormQuestion2.Properties.Settings.Default.NorthWind3ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8744,7 +8744,7 @@ SELECT CustomerID, CustomerTypeID FROM CustomerCustomerDemo WHERE (CustomerID = 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Northwind2DataSet.CustomerCustomerDemoDataTable dataTable) {
+        public virtual int Fill(NorthWind3DataSet.CustomerCustomerDemoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8757,9 +8757,9 @@ SELECT CustomerID, CustomerTypeID FROM CustomerCustomerDemo WHERE (CustomerID = 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Northwind2DataSet.CustomerCustomerDemoDataTable GetData() {
+        public virtual NorthWind3DataSet.CustomerCustomerDemoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Northwind2DataSet.CustomerCustomerDemoDataTable dataTable = new Northwind2DataSet.CustomerCustomerDemoDataTable();
+            NorthWind3DataSet.CustomerCustomerDemoDataTable dataTable = new NorthWind3DataSet.CustomerCustomerDemoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8767,14 +8767,14 @@ SELECT CustomerID, CustomerTypeID FROM CustomerCustomerDemo WHERE (CustomerID = 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet.CustomerCustomerDemoDataTable dataTable) {
+        public virtual int Update(NorthWind3DataSet.CustomerCustomerDemoDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet dataSet) {
+        public virtual int Update(NorthWind3DataSet dataSet) {
             return this.Adapter.Update(dataSet, "CustomerCustomerDemo");
         }
         
@@ -9065,7 +9065,7 @@ SELECT CustomerTypeID, CustomerDesc FROM CustomerDemographics WHERE (CustomerTyp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::MockExam.InClassDemo.Properties.Settings.Default.Northwind2ConnectionString;
+            this._connection.ConnectionString = global::MyMockSolutionWinFormQuestion2.Properties.Settings.Default.NorthWind3ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9082,7 +9082,7 @@ SELECT CustomerTypeID, CustomerDesc FROM CustomerDemographics WHERE (CustomerTyp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Northwind2DataSet.CustomerDemographicsDataTable dataTable) {
+        public virtual int Fill(NorthWind3DataSet.CustomerDemographicsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9095,9 +9095,9 @@ SELECT CustomerTypeID, CustomerDesc FROM CustomerDemographics WHERE (CustomerTyp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Northwind2DataSet.CustomerDemographicsDataTable GetData() {
+        public virtual NorthWind3DataSet.CustomerDemographicsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Northwind2DataSet.CustomerDemographicsDataTable dataTable = new Northwind2DataSet.CustomerDemographicsDataTable();
+            NorthWind3DataSet.CustomerDemographicsDataTable dataTable = new NorthWind3DataSet.CustomerDemographicsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9105,14 +9105,14 @@ SELECT CustomerTypeID, CustomerDesc FROM CustomerDemographics WHERE (CustomerTyp
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet.CustomerDemographicsDataTable dataTable) {
+        public virtual int Update(NorthWind3DataSet.CustomerDemographicsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet dataSet) {
+        public virtual int Update(NorthWind3DataSet dataSet) {
             return this.Adapter.Update(dataSet, "CustomerDemographics");
         }
         
@@ -9454,7 +9454,7 @@ SELECT CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::MockExam.InClassDemo.Properties.Settings.Default.Northwind2ConnectionString;
+            this._connection.ConnectionString = global::MyMockSolutionWinFormQuestion2.Properties.Settings.Default.NorthWind3ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9472,7 +9472,7 @@ SELECT CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Northwind2DataSet.CustomersDataTable dataTable) {
+        public virtual int Fill(NorthWind3DataSet.CustomersDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9485,9 +9485,9 @@ SELECT CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Northwind2DataSet.CustomersDataTable GetData() {
+        public virtual NorthWind3DataSet.CustomersDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Northwind2DataSet.CustomersDataTable dataTable = new Northwind2DataSet.CustomersDataTable();
+            NorthWind3DataSet.CustomersDataTable dataTable = new NorthWind3DataSet.CustomersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9495,14 +9495,14 @@ SELECT CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet.CustomersDataTable dataTable) {
+        public virtual int Update(NorthWind3DataSet.CustomersDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet dataSet) {
+        public virtual int Update(NorthWind3DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Customers");
         }
         
@@ -10212,7 +10212,7 @@ SELECT EmployeeID, LastName, FirstName, Title, TitleOfCourtesy, BirthDate, HireD
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::MockExam.InClassDemo.Properties.Settings.Default.Northwind2ConnectionString;
+            this._connection.ConnectionString = global::MyMockSolutionWinFormQuestion2.Properties.Settings.Default.NorthWind3ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10231,7 +10231,7 @@ SELECT EmployeeID, LastName, FirstName, Title, TitleOfCourtesy, BirthDate, HireD
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Northwind2DataSet.EmployeesDataTable dataTable) {
+        public virtual int Fill(NorthWind3DataSet.EmployeesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10244,9 +10244,9 @@ SELECT EmployeeID, LastName, FirstName, Title, TitleOfCourtesy, BirthDate, HireD
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Northwind2DataSet.EmployeesDataTable GetData() {
+        public virtual NorthWind3DataSet.EmployeesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Northwind2DataSet.EmployeesDataTable dataTable = new Northwind2DataSet.EmployeesDataTable();
+            NorthWind3DataSet.EmployeesDataTable dataTable = new NorthWind3DataSet.EmployeesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10254,14 +10254,14 @@ SELECT EmployeeID, LastName, FirstName, Title, TitleOfCourtesy, BirthDate, HireD
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet.EmployeesDataTable dataTable) {
+        public virtual int Update(NorthWind3DataSet.EmployeesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet dataSet) {
+        public virtual int Update(NorthWind3DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Employees");
         }
         
@@ -11045,7 +11045,7 @@ SELECT EmployeeID, TerritoryID FROM EmployeeTerritories WHERE (EmployeeID = @Emp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::MockExam.InClassDemo.Properties.Settings.Default.Northwind2ConnectionString;
+            this._connection.ConnectionString = global::MyMockSolutionWinFormQuestion2.Properties.Settings.Default.NorthWind3ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11062,7 +11062,7 @@ SELECT EmployeeID, TerritoryID FROM EmployeeTerritories WHERE (EmployeeID = @Emp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Northwind2DataSet.EmployeeTerritoriesDataTable dataTable) {
+        public virtual int Fill(NorthWind3DataSet.EmployeeTerritoriesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -11075,9 +11075,9 @@ SELECT EmployeeID, TerritoryID FROM EmployeeTerritories WHERE (EmployeeID = @Emp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Northwind2DataSet.EmployeeTerritoriesDataTable GetData() {
+        public virtual NorthWind3DataSet.EmployeeTerritoriesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Northwind2DataSet.EmployeeTerritoriesDataTable dataTable = new Northwind2DataSet.EmployeeTerritoriesDataTable();
+            NorthWind3DataSet.EmployeeTerritoriesDataTable dataTable = new NorthWind3DataSet.EmployeeTerritoriesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -11085,14 +11085,14 @@ SELECT EmployeeID, TerritoryID FROM EmployeeTerritories WHERE (EmployeeID = @Emp
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet.EmployeeTerritoriesDataTable dataTable) {
+        public virtual int Update(NorthWind3DataSet.EmployeeTerritoriesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet dataSet) {
+        public virtual int Update(NorthWind3DataSet dataSet) {
             return this.Adapter.Update(dataSet, "EmployeeTerritories");
         }
         
@@ -11220,7 +11220,7 @@ SELECT EmployeeID, TerritoryID FROM EmployeeTerritories WHERE (EmployeeID = @Emp
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class OrderDetailsTableAdapter : global::System.ComponentModel.Component {
+    public partial class Order_DetailsTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -11234,7 +11234,7 @@ SELECT EmployeeID, TerritoryID FROM EmployeeTerritories WHERE (EmployeeID = @Emp
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public OrderDetailsTableAdapter() {
+        public Order_DetailsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -11331,7 +11331,7 @@ SELECT EmployeeID, TerritoryID FROM EmployeeTerritories WHERE (EmployeeID = @Emp
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "OrderDetails";
+            tableMapping.DataSetTable = "Order Details";
             tableMapping.ColumnMappings.Add("OrderID", "OrderID");
             tableMapping.ColumnMappings.Add("ProductID", "ProductID");
             tableMapping.ColumnMappings.Add("UnitPrice", "UnitPrice");
@@ -11340,9 +11340,9 @@ SELECT EmployeeID, TerritoryID FROM EmployeeTerritories WHERE (EmployeeID = @Emp
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[OrderDetails] WHERE (([OrderID] = @Original_OrderID) AND ([Pro" +
-                "ductID] = @Original_ProductID) AND ([UnitPrice] = @Original_UnitPrice) AND ([Qua" +
-                "ntity] = @Original_Quantity) AND ([Discount] = @Original_Discount))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Order Details] WHERE (([OrderID] = @Original_OrderID) AND ([Pr" +
+                "oductID] = @Original_ProductID) AND ([UnitPrice] = @Original_UnitPrice) AND ([Qu" +
+                "antity] = @Original_Quantity) AND ([Discount] = @Original_Discount))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OrderID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OrderID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ProductID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProductID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -11351,8 +11351,8 @@ SELECT EmployeeID, TerritoryID FROM EmployeeTerritories WHERE (EmployeeID = @Emp
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Discount", global::System.Data.SqlDbType.Real, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Discount", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[OrderDetails] ([OrderID], [ProductID], [UnitPrice], [Quantity], [Discount]) VALUES (@OrderID, @ProductID, @UnitPrice, @Quantity, @Discount);
-SELECT OrderID, ProductID, UnitPrice, Quantity, Discount FROM OrderDetails WHERE (OrderID = @OrderID) AND (ProductID = @ProductID)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Order Details] ([OrderID], [ProductID], [UnitPrice], [Quantity], [Discount]) VALUES (@OrderID, @ProductID, @UnitPrice, @Quantity, @Discount);
+SELECT OrderID, ProductID, UnitPrice, Quantity, Discount FROM [Order Details] WHERE (OrderID = @OrderID) AND (ProductID = @ProductID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OrderID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OrderID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProductID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProductID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -11361,8 +11361,8 @@ SELECT OrderID, ProductID, UnitPrice, Quantity, Discount FROM OrderDetails WHERE
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Discount", global::System.Data.SqlDbType.Real, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Discount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[OrderDetails] SET [OrderID] = @OrderID, [ProductID] = @ProductID, [UnitPrice] = @UnitPrice, [Quantity] = @Quantity, [Discount] = @Discount WHERE (([OrderID] = @Original_OrderID) AND ([ProductID] = @Original_ProductID) AND ([UnitPrice] = @Original_UnitPrice) AND ([Quantity] = @Original_Quantity) AND ([Discount] = @Original_Discount));
-SELECT OrderID, ProductID, UnitPrice, Quantity, Discount FROM OrderDetails WHERE (OrderID = @OrderID) AND (ProductID = @ProductID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Order Details] SET [OrderID] = @OrderID, [ProductID] = @ProductID, [UnitPrice] = @UnitPrice, [Quantity] = @Quantity, [Discount] = @Discount WHERE (([OrderID] = @Original_OrderID) AND ([ProductID] = @Original_ProductID) AND ([UnitPrice] = @Original_UnitPrice) AND ([Quantity] = @Original_Quantity) AND ([Discount] = @Original_Discount));
+SELECT OrderID, ProductID, UnitPrice, Quantity, Discount FROM [Order Details] WHERE (OrderID = @OrderID) AND (ProductID = @ProductID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OrderID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OrderID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProductID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProductID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -11380,7 +11380,7 @@ SELECT OrderID, ProductID, UnitPrice, Quantity, Discount FROM OrderDetails WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::MockExam.InClassDemo.Properties.Settings.Default.Northwind2ConnectionString;
+            this._connection.ConnectionString = global::MyMockSolutionWinFormQuestion2.Properties.Settings.Default.NorthWind3ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11389,7 +11389,8 @@ SELECT OrderID, ProductID, UnitPrice, Quantity, Discount FROM OrderDetails WHERE
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT OrderID, ProductID, UnitPrice, Quantity, Discount FROM dbo.OrderDetails";
+            this._commandCollection[0].CommandText = "SELECT OrderID, ProductID, UnitPrice, Quantity, Discount FROM dbo.[Order Details]" +
+                "";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -11397,7 +11398,7 @@ SELECT OrderID, ProductID, UnitPrice, Quantity, Discount FROM OrderDetails WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Northwind2DataSet.OrderDetailsDataTable dataTable) {
+        public virtual int Fill(NorthWind3DataSet.Order_DetailsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -11410,9 +11411,9 @@ SELECT OrderID, ProductID, UnitPrice, Quantity, Discount FROM OrderDetails WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Northwind2DataSet.OrderDetailsDataTable GetData() {
+        public virtual NorthWind3DataSet.Order_DetailsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Northwind2DataSet.OrderDetailsDataTable dataTable = new Northwind2DataSet.OrderDetailsDataTable();
+            NorthWind3DataSet.Order_DetailsDataTable dataTable = new NorthWind3DataSet.Order_DetailsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -11420,15 +11421,15 @@ SELECT OrderID, ProductID, UnitPrice, Quantity, Discount FROM OrderDetails WHERE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet.OrderDetailsDataTable dataTable) {
+        public virtual int Update(NorthWind3DataSet.Order_DetailsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet dataSet) {
-            return this.Adapter.Update(dataSet, "OrderDetails");
+        public virtual int Update(NorthWind3DataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Order Details");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11797,7 +11798,7 @@ SELECT OrderID, CustomerID, EmployeeID, OrderDate, RequiredDate, ShippedDate, Sh
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::MockExam.InClassDemo.Properties.Settings.Default.Northwind2ConnectionString;
+            this._connection.ConnectionString = global::MyMockSolutionWinFormQuestion2.Properties.Settings.Default.NorthWind3ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11816,7 +11817,7 @@ SELECT OrderID, CustomerID, EmployeeID, OrderDate, RequiredDate, ShippedDate, Sh
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Northwind2DataSet.OrdersDataTable dataTable) {
+        public virtual int Fill(NorthWind3DataSet.OrdersDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -11829,9 +11830,9 @@ SELECT OrderID, CustomerID, EmployeeID, OrderDate, RequiredDate, ShippedDate, Sh
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Northwind2DataSet.OrdersDataTable GetData() {
+        public virtual NorthWind3DataSet.OrdersDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Northwind2DataSet.OrdersDataTable dataTable = new Northwind2DataSet.OrdersDataTable();
+            NorthWind3DataSet.OrdersDataTable dataTable = new NorthWind3DataSet.OrdersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -11839,14 +11840,14 @@ SELECT OrderID, CustomerID, EmployeeID, OrderDate, RequiredDate, ShippedDate, Sh
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet.OrdersDataTable dataTable) {
+        public virtual int Update(NorthWind3DataSet.OrdersDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet dataSet) {
+        public virtual int Update(NorthWind3DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Orders");
         }
         
@@ -12564,7 +12565,7 @@ SELECT ProductID, ProductName, SupplierID, CategoryID, QuantityPerUnit, UnitPric
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::MockExam.InClassDemo.Properties.Settings.Default.Northwind2ConnectionString;
+            this._connection.ConnectionString = global::MyMockSolutionWinFormQuestion2.Properties.Settings.Default.NorthWind3ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12582,7 +12583,7 @@ SELECT ProductID, ProductName, SupplierID, CategoryID, QuantityPerUnit, UnitPric
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Northwind2DataSet.ProductsDataTable dataTable) {
+        public virtual int Fill(NorthWind3DataSet.ProductsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -12595,9 +12596,9 @@ SELECT ProductID, ProductName, SupplierID, CategoryID, QuantityPerUnit, UnitPric
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Northwind2DataSet.ProductsDataTable GetData() {
+        public virtual NorthWind3DataSet.ProductsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Northwind2DataSet.ProductsDataTable dataTable = new Northwind2DataSet.ProductsDataTable();
+            NorthWind3DataSet.ProductsDataTable dataTable = new NorthWind3DataSet.ProductsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -12605,14 +12606,14 @@ SELECT ProductID, ProductName, SupplierID, CategoryID, QuantityPerUnit, UnitPric
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet.ProductsDataTable dataTable) {
+        public virtual int Update(NorthWind3DataSet.ProductsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet dataSet) {
+        public virtual int Update(NorthWind3DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Products");
         }
         
@@ -13123,7 +13124,7 @@ SELECT RegionID, RegionDescription FROM Region WHERE (RegionID = @RegionID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::MockExam.InClassDemo.Properties.Settings.Default.Northwind2ConnectionString;
+            this._connection.ConnectionString = global::MyMockSolutionWinFormQuestion2.Properties.Settings.Default.NorthWind3ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13140,7 +13141,7 @@ SELECT RegionID, RegionDescription FROM Region WHERE (RegionID = @RegionID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Northwind2DataSet.RegionDataTable dataTable) {
+        public virtual int Fill(NorthWind3DataSet.RegionDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -13153,9 +13154,9 @@ SELECT RegionID, RegionDescription FROM Region WHERE (RegionID = @RegionID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Northwind2DataSet.RegionDataTable GetData() {
+        public virtual NorthWind3DataSet.RegionDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Northwind2DataSet.RegionDataTable dataTable = new Northwind2DataSet.RegionDataTable();
+            NorthWind3DataSet.RegionDataTable dataTable = new NorthWind3DataSet.RegionDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -13163,14 +13164,14 @@ SELECT RegionID, RegionDescription FROM Region WHERE (RegionID = @RegionID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet.RegionDataTable dataTable) {
+        public virtual int Update(NorthWind3DataSet.RegionDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet dataSet) {
+        public virtual int Update(NorthWind3DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Region");
         }
         
@@ -13450,7 +13451,7 @@ SELECT ShipperID, CompanyName, Phone FROM Shippers WHERE (ShipperID = @ShipperID
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::MockExam.InClassDemo.Properties.Settings.Default.Northwind2ConnectionString;
+            this._connection.ConnectionString = global::MyMockSolutionWinFormQuestion2.Properties.Settings.Default.NorthWind3ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13467,7 +13468,7 @@ SELECT ShipperID, CompanyName, Phone FROM Shippers WHERE (ShipperID = @ShipperID
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Northwind2DataSet.ShippersDataTable dataTable) {
+        public virtual int Fill(NorthWind3DataSet.ShippersDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -13480,9 +13481,9 @@ SELECT ShipperID, CompanyName, Phone FROM Shippers WHERE (ShipperID = @ShipperID
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Northwind2DataSet.ShippersDataTable GetData() {
+        public virtual NorthWind3DataSet.ShippersDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Northwind2DataSet.ShippersDataTable dataTable = new Northwind2DataSet.ShippersDataTable();
+            NorthWind3DataSet.ShippersDataTable dataTable = new NorthWind3DataSet.ShippersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -13490,14 +13491,14 @@ SELECT ShipperID, CompanyName, Phone FROM Shippers WHERE (ShipperID = @ShipperID
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet.ShippersDataTable dataTable) {
+        public virtual int Update(NorthWind3DataSet.ShippersDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet dataSet) {
+        public virtual int Update(NorthWind3DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Shippers");
         }
         
@@ -13860,7 +13861,7 @@ SELECT SupplierID, CompanyName, ContactName, ContactTitle, Address, City, Region
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::MockExam.InClassDemo.Properties.Settings.Default.Northwind2ConnectionString;
+            this._connection.ConnectionString = global::MyMockSolutionWinFormQuestion2.Properties.Settings.Default.NorthWind3ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13878,7 +13879,7 @@ SELECT SupplierID, CompanyName, ContactName, ContactTitle, Address, City, Region
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Northwind2DataSet.SuppliersDataTable dataTable) {
+        public virtual int Fill(NorthWind3DataSet.SuppliersDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -13891,9 +13892,9 @@ SELECT SupplierID, CompanyName, ContactName, ContactTitle, Address, City, Region
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Northwind2DataSet.SuppliersDataTable GetData() {
+        public virtual NorthWind3DataSet.SuppliersDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Northwind2DataSet.SuppliersDataTable dataTable = new Northwind2DataSet.SuppliersDataTable();
+            NorthWind3DataSet.SuppliersDataTable dataTable = new NorthWind3DataSet.SuppliersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -13901,14 +13902,14 @@ SELECT SupplierID, CompanyName, ContactName, ContactTitle, Address, City, Region
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet.SuppliersDataTable dataTable) {
+        public virtual int Update(NorthWind3DataSet.SuppliersDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet dataSet) {
+        public virtual int Update(NorthWind3DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Suppliers");
         }
         
@@ -14496,7 +14497,7 @@ SELECT TerritoryID, TerritoryDescription, RegionID FROM Territories WHERE (Terri
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::MockExam.InClassDemo.Properties.Settings.Default.Northwind2ConnectionString;
+            this._connection.ConnectionString = global::MyMockSolutionWinFormQuestion2.Properties.Settings.Default.NorthWind3ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14513,7 +14514,7 @@ SELECT TerritoryID, TerritoryDescription, RegionID FROM Territories WHERE (Terri
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Northwind2DataSet.TerritoriesDataTable dataTable) {
+        public virtual int Fill(NorthWind3DataSet.TerritoriesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -14526,9 +14527,9 @@ SELECT TerritoryID, TerritoryDescription, RegionID FROM Territories WHERE (Terri
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Northwind2DataSet.TerritoriesDataTable GetData() {
+        public virtual NorthWind3DataSet.TerritoriesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Northwind2DataSet.TerritoriesDataTable dataTable = new Northwind2DataSet.TerritoriesDataTable();
+            NorthWind3DataSet.TerritoriesDataTable dataTable = new NorthWind3DataSet.TerritoriesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -14536,14 +14537,14 @@ SELECT TerritoryID, TerritoryDescription, RegionID FROM Territories WHERE (Terri
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet.TerritoriesDataTable dataTable) {
+        public virtual int Update(NorthWind3DataSet.TerritoriesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Northwind2DataSet dataSet) {
+        public virtual int Update(NorthWind3DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Territories");
         }
         
@@ -14710,7 +14711,7 @@ SELECT TerritoryID, TerritoryDescription, RegionID FROM Territories WHERE (Terri
         
         private EmployeeTerritoriesTableAdapter _employeeTerritoriesTableAdapter;
         
-        private OrderDetailsTableAdapter _orderDetailsTableAdapter;
+        private Order_DetailsTableAdapter _order_DetailsTableAdapter;
         
         private OrdersTableAdapter _ordersTableAdapter;
         
@@ -14828,12 +14829,12 @@ SELECT TerritoryID, TerritoryDescription, RegionID FROM Territories WHERE (Terri
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public OrderDetailsTableAdapter OrderDetailsTableAdapter {
+        public Order_DetailsTableAdapter Order_DetailsTableAdapter {
             get {
-                return this._orderDetailsTableAdapter;
+                return this._order_DetailsTableAdapter;
             }
             set {
-                this._orderDetailsTableAdapter = value;
+                this._order_DetailsTableAdapter = value;
             }
         }
         
@@ -14964,9 +14965,9 @@ SELECT TerritoryID, TerritoryDescription, RegionID FROM Territories WHERE (Terri
                             && (this._employeeTerritoriesTableAdapter.Connection != null))) {
                     return this._employeeTerritoriesTableAdapter.Connection;
                 }
-                if (((this._orderDetailsTableAdapter != null) 
-                            && (this._orderDetailsTableAdapter.Connection != null))) {
-                    return this._orderDetailsTableAdapter.Connection;
+                if (((this._order_DetailsTableAdapter != null) 
+                            && (this._order_DetailsTableAdapter.Connection != null))) {
+                    return this._order_DetailsTableAdapter.Connection;
                 }
                 if (((this._ordersTableAdapter != null) 
                             && (this._ordersTableAdapter.Connection != null))) {
@@ -15023,7 +15024,7 @@ SELECT TerritoryID, TerritoryDescription, RegionID FROM Territories WHERE (Terri
                 if ((this._employeeTerritoriesTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._orderDetailsTableAdapter != null)) {
+                if ((this._order_DetailsTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._ordersTableAdapter != null)) {
@@ -15053,7 +15054,7 @@ SELECT TerritoryID, TerritoryDescription, RegionID FROM Territories WHERE (Terri
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(Northwind2DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(NorthWind3DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._categoriesTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Categories.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -15164,12 +15165,12 @@ SELECT TerritoryID, TerritoryDescription, RegionID FROM Territories WHERE (Terri
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._orderDetailsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.OrderDetails.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._order_DetailsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Order_Details.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._orderDetailsTableAdapter.Update(updatedRows));
+                    result = (result + this._order_DetailsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -15181,7 +15182,7 @@ SELECT TerritoryID, TerritoryDescription, RegionID FROM Territories WHERE (Terri
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(Northwind2DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(NorthWind3DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._categoriesTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Categories.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -15280,11 +15281,11 @@ SELECT TerritoryID, TerritoryDescription, RegionID FROM Territories WHERE (Terri
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._orderDetailsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.OrderDetails.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._order_DetailsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Order_Details.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._orderDetailsTableAdapter.Update(addedRows));
+                    result = (result + this._order_DetailsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -15296,13 +15297,13 @@ SELECT TerritoryID, TerritoryDescription, RegionID FROM Territories WHERE (Terri
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(Northwind2DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(NorthWind3DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._orderDetailsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.OrderDetails.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._order_DetailsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Order_Details.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._orderDetailsTableAdapter.Update(deletedRows));
+                    result = (result + this._order_DetailsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -15435,7 +15436,7 @@ SELECT TerritoryID, TerritoryDescription, RegionID FROM Territories WHERE (Terri
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(Northwind2DataSet dataSet) {
+        public virtual int UpdateAll(NorthWind3DataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
@@ -15472,8 +15473,8 @@ SELECT TerritoryID, TerritoryDescription, RegionID FROM Territories WHERE (Terri
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._orderDetailsTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._orderDetailsTableAdapter.Connection) == false))) {
+            if (((this._order_DetailsTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._order_DetailsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -15593,13 +15594,13 @@ SELECT TerritoryID, TerritoryDescription, RegionID FROM Territories WHERE (Terri
                         adaptersWithAcceptChangesDuringUpdate.Add(this._employeeTerritoriesTableAdapter.Adapter);
                     }
                 }
-                if ((this._orderDetailsTableAdapter != null)) {
-                    revertConnections.Add(this._orderDetailsTableAdapter, this._orderDetailsTableAdapter.Connection);
-                    this._orderDetailsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._orderDetailsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._orderDetailsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._orderDetailsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._orderDetailsTableAdapter.Adapter);
+                if ((this._order_DetailsTableAdapter != null)) {
+                    revertConnections.Add(this._order_DetailsTableAdapter, this._order_DetailsTableAdapter.Connection);
+                    this._order_DetailsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._order_DetailsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._order_DetailsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._order_DetailsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._order_DetailsTableAdapter.Adapter);
                     }
                 }
                 if ((this._ordersTableAdapter != null)) {
@@ -15738,9 +15739,9 @@ SELECT TerritoryID, TerritoryDescription, RegionID FROM Territories WHERE (Terri
                     this._employeeTerritoriesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._employeeTerritoriesTableAdapter]));
                     this._employeeTerritoriesTableAdapter.Transaction = null;
                 }
-                if ((this._orderDetailsTableAdapter != null)) {
-                    this._orderDetailsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._orderDetailsTableAdapter]));
-                    this._orderDetailsTableAdapter.Transaction = null;
+                if ((this._order_DetailsTableAdapter != null)) {
+                    this._order_DetailsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._order_DetailsTableAdapter]));
+                    this._order_DetailsTableAdapter.Transaction = null;
                 }
                 if ((this._ordersTableAdapter != null)) {
                     this._ordersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._ordersTableAdapter]));

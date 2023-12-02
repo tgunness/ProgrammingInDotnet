@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MockExam.InClassDemo.Properties
+namespace MyMockSolutionWinFormQuestion2.Properties
 {
 
 
@@ -44,7 +44,7 @@ namespace MockExam.InClassDemo.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MockExam.InClassDemo.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MyMockSolutionWinFormQuestion2.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

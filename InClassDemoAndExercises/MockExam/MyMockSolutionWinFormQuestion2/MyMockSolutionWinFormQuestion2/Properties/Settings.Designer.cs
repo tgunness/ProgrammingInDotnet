@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MockExam.InClassDemo.Properties {
+namespace MyMockSolutionWinFormQuestion2.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -26,11 +26,11 @@ namespace MockExam.InClassDemo.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=Northwind2;Persist Security Info=True;Us" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=NorthWind3;Persist Security Info=True;Us" +
             "er ID=sa;Password=Password01!")]
-        public string Northwind2ConnectionString {
+        public string NorthWind3ConnectionString {
             get {
-                return ((string)(this["Northwind2ConnectionString"]));
+                return ((string)(this["NorthWind3ConnectionString"]));
             }
         }
     }
