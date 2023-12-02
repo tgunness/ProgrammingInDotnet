@@ -15,6 +15,22 @@ img[alt~="center"] {
 - Assignment Lab 5 due **December 8th 2023 11:59pm (no late days)**
   - See ["How to upload your game to Canvas"](https://www.youtube.com/watch?v=PNpVoE8w2r8)
 ---
+
+# Final Exam Details
+
+Final Exam will be held on **Tuesday December 12th 4:30pm - 7:30pm**
+
+**Please goto room F170 and if there are no more free spaces then please goto room H010** [we have 35 spaces in F170, 3 in H010]
+
+The format of this Final Exam will be identical to midterm:
+- You MUST bring student card id to the exam
+- You are allowed to use Visual Studio to code your answers to the questions
+- You are allowed to use the .NET API Browser (https://learn.microsoft.com/en-us/dotnet/csharp/)
+- No other external resources are allowed
+
+---
+
+
 <style scoped>section { font-size: 23px; }</style>
 # Recap:
 - Week 1 - Introduced .NET & Visual Studio
