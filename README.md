@@ -29,6 +29,7 @@ Let's embark on this journey together and unlock the full potential of your soft
 - [Week 11 Part 1](https://tgunness.github.io/ProgrammingInDotnet/Week11Part1.html)
 - [Week 11 Part 2](https://tgunness.github.io/ProgrammingInDotnet/Week11Part2.html)
 - [Week 12 Part 1](https://tgunness.github.io/ProgrammingInDotnet/Week12Part1.html)
+- [Week 12 Part 2](https://tgunness.github.io/ProgrammingInDotnet/Week12Part2.html)
 
 # Repo Structure
 

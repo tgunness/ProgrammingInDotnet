@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Week12.InClassDemo.Data;
 
 namespace Week12.InClassDemo.LINQtoSQL
 {
@@ -8,7 +9,7 @@ namespace Week12.InClassDemo.LINQtoSQL
     {
         static void Main(string[] args)
         {
-            using(var context = new NorthWindDemo1DataContext())
+            using(var context = new NorthWindDataContext())
             {
                 //LINQ to get data in DB
 
