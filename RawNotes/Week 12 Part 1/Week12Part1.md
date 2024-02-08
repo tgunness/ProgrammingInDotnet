@@ -12,7 +12,7 @@ img[alt~="center"] {
 ---
 # Announcements  
 
-- Assignment Lab 5 due **December 8th 2023 11:59pm (no late days)**
+- Assignment Lab 5 due **April 14th 2024 11:59pm (no late days)**
   - See ["How to upload your game to Canvas"](https://www.youtube.com/watch?v=PNpVoE8w2r8)
 ---
 <style scoped>section { font-size: 23px; }</style>

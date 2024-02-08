@@ -12,11 +12,11 @@ img[alt~="center"] {
 ---
 # Announcements  
 
-- Assignment Lab 3 due <span style="color:red;">November 16th 2023 11:59pm</span>
+- Assignment Lab 3 due <span style="color:red;">March 24th 2024 11:59pm</span>
 
 - Lab 1 & 2 Grades - will be posted by end of this week
 
-- Midterm Grades - will be posted by Nov 17th
+- Midterm Grades - will be posted soon
 
 ---
 <style scoped>section { font-size: 22px; }</style>

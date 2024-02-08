@@ -169,7 +169,7 @@ Tasks:
 ---
 # Reminder
 
-- **Lab Assignment 1 Due October 1st**
+- **Lab Assignment 1 Due Feb 18th**
   - If you'd like a code review (feedback), please email me
 
 ---

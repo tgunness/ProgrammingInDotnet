@@ -12,7 +12,7 @@ img[alt~="center"] {
 ---
 # Announcements  
 
-- Assignment Lab 3 due <span style="color:red;">November 16th 2023 11:59pm</span>
+- Assignment Lab 3 due <span style="color:red;">March 24th 2024 11:59pm</span>
 
 ---
 <style scoped>section { font-size: 25px; }</style>
