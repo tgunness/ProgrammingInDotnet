@@ -234,8 +234,8 @@ Create Form Design for Lab 3 Part 2
 ---
 # Next Week
 
-- Monday - Midterm Review
-- Wednesday - Midterm
+- Tuesday - Midterm Review
+- Thursday - Midterm
 
 ---
 
