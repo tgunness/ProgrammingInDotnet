@@ -14,7 +14,7 @@ img[alt~="center"] {
 
 - Assignment Lab 2 due <span style="color:red;">March 10th 2024 11:59pm</span>
 
-- Midterm will be in class on <span style="color:red;">March 14th</span>
+- Midterm will be on <span style="color:red;">March 14th</span>
     - Will be done in the classroom, on lab computer
     - Please bring student cards with you (ie. proof of ID)
     - **Will cover everything up to and including GUI**
