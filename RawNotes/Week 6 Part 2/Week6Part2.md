@@ -12,14 +12,14 @@ img[alt~="center"] {
 ---
 # Announcements  
 
-- Assignment Lab 2 due <span style="color:red;">October 22nd 2023 11:59pm</span>
+- Assignment Lab 2 due <span style="color:red;">March 10th 2024 11:59pm</span>
 
-- Midterm will be in class on <span style="color:red;">October 25th</span>
+- Midterm will be in class on <span style="color:red;">March 14th</span>
     - Will be done in the classroom, on lab computer
     - Please bring student cards with you (ie. proof of ID)
     - **Will cover everything up to and including GUI**
 
-- Assignment Lab 3 available today, <span style="color:red;">due Nov 5th 11:59pm</span>
+- Assignment Lab 3 available today, <span style="color:red;">due March 24th 11:59pm</span>
 ---
 
 # Recap:
@@ -176,7 +176,7 @@ private void MainForm_Load(object sender, EventArgs e)
 
 # Assignment Lab 3 - Introduction
 
-- Due Nov. 5th 2023
+- Due March 24th 2024
 
 ---
 <style scoped>section { font-size: 20px; }</style>

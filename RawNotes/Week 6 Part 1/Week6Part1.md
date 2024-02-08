@@ -12,10 +12,10 @@ img[alt~="center"] {
 ---
 # Announcements  
 
-- Assignment Lab 2 now due <span style="color:red;">**October 22nd 2023 11:59pm**</span>
+- Assignment Lab 2 now due <span style="color:red;">**March 10th 2024 11:59pm**</span>
     - Note: GUI will be covered this week in depth which will be helpful for Part 2
 
-- Midterm will be in class on <span style="color:red;">**October 25th** </span>
+- Midterm will be in class on <span style="color:red;">**March 14th** </span>
     - Will be done in the classroom, on computer
     - **Please bring student cards with you (ie. proof of ID)**
 ---

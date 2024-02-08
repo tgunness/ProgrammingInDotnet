@@ -15,8 +15,8 @@ img[alt~="center"] {
 # Midterm Details
 
 - Time / Location
-    - **<span style="color:red;">Wednesday, October 25th 2023, from 7 pm to 9pm </span>**
-    - **<span style="color:red;">In-Class</span>**
+    - **<span style="color:red;">Thursday, March 14th 2024, from 7 pm to 9pm </span>**
+    - **<span style="color:red;">Remote</span>**
     
 - How will it be done
     - **Must use a Lab Room computer**
