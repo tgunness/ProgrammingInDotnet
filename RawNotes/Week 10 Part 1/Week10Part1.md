@@ -19,7 +19,7 @@ img[alt~="center"] {
 ---
 <style scoped>section { font-size: 25px; }</style>
 # Recap:
-- Week 1 - Introduced .NET & Visual Studio
+- Week 1- Introduced .NET & Visual Studio
 - Week 2 - Introduced C# Language
 - Week 3 - Introduced Lists and LINQ
 - Week 4 - OOP Fundamentals - Classes and Objects

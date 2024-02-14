@@ -11,7 +11,7 @@ img[alt~="center"] {
 #### by Prof. Trishan Gunness 
 ---
 # Recap:
-- Week 1 - Introduced .NET & Visual Studio
+- Week 1- Introduced .NET & Visual Studio
 - Week 2 - Introduced C# Language
 - Week 3 - Introduced Lists and LINQ
 - Week 4 - OOP Fundamentals - Classes and Objects
@@ -432,7 +432,7 @@ public class InvalidAnimalException : Exception
 - Now that we've hit end of Week 5, you're equipped with all knowledge required to complete Lab Assignment 2
 
 - We will leave the reminder of class to work on Part 1 or Part 2 of this assignment.
-  - Note: we'll take a deeper look at GUI next week that aids with Part 2
+  - Note: we'll take a deeper look at GUI next Modulethat aids with Part 2
 ---
 
 ![bg 60%](Week5.2-image.png)
@@ -441,7 +441,7 @@ public class InvalidAnimalException : Exception
 ---
 # Conclusion
 
-- This week concludes the "Fundamentals of OOP".
+- This Moduleconcludes the "Fundamentals of OOP".
 - Topics we touch include:
   - Classes and Objects
   - Association
