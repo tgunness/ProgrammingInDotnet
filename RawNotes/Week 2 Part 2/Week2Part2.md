@@ -10,10 +10,8 @@ img[alt~="center"] {
 
 # Week 2 Part 2
 ---
-# Review Last Class Exercise 
----
 # Car Dealership Part 1
-We will demo one [working example](https://github.com/tgunness/ProgrammingInDotnet/tree/main/Week2/CarDealership)
+We will demo one [working example](https://github.com/tgunness/ProgrammingInDotnet/tree/main/InClassDemoAndExercises/Week%202%20-%20C%23%20Language/Exercise2_CarDealership)
 
 ---
 # Introduction to Windows Form GUI
