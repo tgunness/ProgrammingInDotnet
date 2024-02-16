@@ -81,19 +81,7 @@ By the end of this module you will be able to breakdown real world entities into
 ![UML Diagram](image-1.png)
 
 ---
-# [Exercise]() - Case Study
-Old MacDonald Farm Inc. has reached out to your software development agency for their software development needs. 
 
-**"At Old MacDonald Farm Inc., they have workers that picks Apples from their orchard Farm, places these Apples into Boxes, then loads those Boxes into Trucks which make deliveries across Canada."**
-
-_Your first order of business is modeling their workflow._
-
-Tasks:
-
-1. Identify the real world objects within their workflow.
-2. create UML Class Diagrams for the objects
-
----
 # How to code Classes (C#)
 ```csharp 
 public class Apple //<--Class Name
@@ -144,6 +132,20 @@ a = new Apple();//<--'new' allocates memory for 'a'
 Apple a = new Apple(); //<--Declares and allocates
 ```
 ---
+# [Exercise]() - Case Study
+Old MacDonald Farm Inc. has reached out to your software development agency for their software development needs. 
+
+**"At Old MacDonald Farm Inc., they have workers that picks Apples from their orchard Farm, places these Apples into Boxes, then loads those Boxes into Trucks which make deliveries across Canada."**
+
+_Your first order of business is modeling their workflow._
+
+Tasks:
+
+1. Identify the real world objects within their workflow.
+2. create UML Class Diagrams for the objects
+
+---
+
 # [Exercise]() - Case Study - cont.
 
 _Now that we have complete modeling the workflow. We now need to create Class for all our real world objects._
