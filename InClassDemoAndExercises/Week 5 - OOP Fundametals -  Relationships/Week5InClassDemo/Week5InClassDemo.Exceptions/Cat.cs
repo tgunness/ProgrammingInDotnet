@@ -7,6 +7,12 @@ namespace Week5InClassDemo.Exceptions
     {
         private int _age;
         public Cat() { }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="age"></param>
+        /// <exception cref="ProblematicAnimalException">ProblematicAnimalException</exception>
         public Cat(int age)
         {
             if (age == 0)
@@ -20,25 +26,25 @@ namespace Week5InClassDemo.Exceptions
 
             string val = "";
             int convertedAge = 0;
-            //try
-            //{
+            try
+            {
                 convertedAge = 10 / _age;
                 val = $"Cat is {convertedAge} years old";
 
-            //}
-            //catch(DivideByZeroException ex)
-            //{
-            //    convertedAge = 0;
-            //    val = $"age can not be zero {ex.Message}";
-            //}
-            //catch(Exception ex)
-            //{
-            //    val = $"something happen but i dont know what {ex.Message}";
-            //}
-            //finally
-            //{
-            //    Console.WriteLine("hit the finally block");
-            //}
+            }
+            catch (DivideByZeroException ex)
+            {
+                convertedAge = 0;
+                val = $"age can not be zero {ex.Message}";
+            }
+            catch (Exception ex)
+            {
+                val = $"something happen but i dont know what {ex.Message}";
+            }
+            finally
+            {
+                Console.WriteLine("hit the finally block");
+            }
             return val;
         }
     }
