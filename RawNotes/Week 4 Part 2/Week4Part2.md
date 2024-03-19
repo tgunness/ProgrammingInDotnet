@@ -11,12 +11,6 @@ img[alt~="center"] {
 # Programming in .NET
 #### by Prof. Trishan Gunness 
 ---
-# Schedule:
-- Week 1- Introduced .NET & Visual Studio
-- Week 2 - Introduced C# Language
-- Week 3 - Introduced Lists and LINQ
-- ***Week 4 & 5 - Fundamentals of OOP***
----
 # Last Class - Objects & Classes
 
 - **OOP** is based on objects
@@ -250,3 +244,6 @@ Next Class:
 - **Inheritance**: https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance
 - **Object Initializers**:https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers
 
+
+---
+# END

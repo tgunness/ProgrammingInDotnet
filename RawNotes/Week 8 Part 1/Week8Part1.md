@@ -12,37 +12,8 @@ img[alt~="center"] {
 ---
 # Announcements  
 
-- Assignment Lab 3 due <span style="color:red;">March 24th 2024 11:59pm</span>
-
-- Lab 1 & 2 Grades - will be posted by end of this week
-
-- Midterm Grades - will be posted soon
-
 ---
-<style scoped>section { font-size: 22px; }</style>
-# Recap:
-- Week 1- Introduced .NET & Visual Studio
-- Week 2 - Introduced C# Language
-- Week 3 - Introduced Lists and LINQ
-- Week 4 - OOP Fundamentals - Classes and Objects
-- Week 5 - OOP Fundamentals - Relationships
-- Week 6 - GUI - Forms and Events
-- Week 7 - Midterm 
-<b>
-- Week 8
-  - Part 1 -
-    - Strings
-    - Characters
-    - Files & Streams
-    - Serialization
-    - ~~Events & Delegates~~ (lots to cover here, moving to Week 9.1)
-    - ~~Classes File and Directory~~ (moving to Week 9.1)
-  - Part 2 
-    - Gaming I
-</b>
-
----
-# Week 8 Part 1 
+# Week 8
 
 ## Strings, Characters, Files & Streams
 
@@ -521,10 +492,6 @@ DEMO - ReadSequentialAccessFile
 - Files & Streams
 - Sequential File Reads
 - Serialization
-
----
-# Next Class
-## Gaming I
 
 ---
 

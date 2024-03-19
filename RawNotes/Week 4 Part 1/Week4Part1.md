@@ -11,12 +11,6 @@ img[alt~="center"] {
 # Programming in .NET
 #### by Prof. Trishan Gunness 
 ---
-# Recap:
-- Week 1- Introduced .NET & Visual Studio
-- Week 2 - Introduced C# Language
-- Week 3 - Introduced Lists and LINQ
-- ***Week 4 & 5 - Fundamentals of OOP***
----
 
 ![bg center:80% 90%](<Blank 2 Grids Collage.png>) 
 ![bg center:800% 90%](Nest-Features.jpg)
@@ -167,12 +161,6 @@ Tasks:
 - Destruction of Objects
 - Inheritance
 
-
----
-# Reminder
-
-- **Lab Assignment 1 Due Feb 18th**
-  - If you'd like a code review (feedback), please email me
 
 ---
 

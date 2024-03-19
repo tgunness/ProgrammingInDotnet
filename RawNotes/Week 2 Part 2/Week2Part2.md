@@ -194,6 +194,6 @@ namespace StreamReadWrite
 
 # Lab 1 - Introduction
 
-[Lab 1 - Out of Sorts](https://mycanvas.mohawkcollege.ca/courses/92925/pages/lab-assignment-1?module_item_id=4762945)
+---
 
-**Due: Feb 18th 2024 11:59pm**
+# END

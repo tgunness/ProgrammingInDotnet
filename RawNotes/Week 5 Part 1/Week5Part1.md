@@ -11,13 +11,6 @@ img[alt~="center"] {
 # Programming in .NET
 #### by Prof. Trishan Gunness 
 ---
-# Recap:
-- Week 1- Introduced .NET & Visual Studio
-- Week 2 - Introduced C# Language
-- Week 3 - Introduced Lists and LINQ
-- Week 4 - OOP Fundamentals - Classes and Objects
-- ***Week 5 - OOP Fundamentals - Relationships***
----
 
 # Week 5 Topics
 
@@ -307,34 +300,5 @@ You are given a set of objects within a School. You are to create relationships 
 
 --- 
 
+# END
 
-
-
-
-
-
-
-
-
-
-<style scoped>section { display: none; }</style>
-
-Topics:
-Part 1:
-- inheritance
-  - base class (ultimate base class Object)
-  - derived class
-  - protected members
-  - Constructors in Derived Classes
-  - Demo
-    - BasePlusCommissionEmployee
-    - CommissionEmployee
-  - Benefits in Software Engineering
-  - In Class Exercise
-
-- abstract classes
-  - can't be instantiated
-
-- interfaces
-
-- In Class Exercise

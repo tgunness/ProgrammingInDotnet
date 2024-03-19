@@ -11,24 +11,6 @@ img[alt~="center"] {
 #### by Prof. Trishan Gunness 
 ---
 # Announcements  
-
-- Assignment Lab 2 due <span style="color:red;">March 10th 2024 11:59pm</span>
-
-- Midterm will be on <span style="color:red;">March 14th</span>
-    - Will be done in the classroom, on lab computer
-    - Please bring student cards with you (ie. proof of ID)
-    - **Will cover everything up to and including GUI**
-
-- Assignment Lab 3 available today, <span style="color:red;">due March 24th 11:59pm</span>
----
-
-# Recap:
-- Week 1- Introduced .NET & Visual Studio
-- Week 2 - Introduced C# Language
-- Week 3 - Introduced Lists and LINQ
-- Week 4 - OOP Fundamentals - Classes and Objects
-- Week 5 - OOP Fundamentals - Relationships
-- **Week 6 - GUI - Forms and Events**
 ---
 
 # Recap Last Class - GUI Forms and Events
@@ -175,8 +157,6 @@ private void MainForm_Load(object sender, EventArgs e)
 --- 
 
 # Assignment Lab 3 - Introduction
-
-- Due March 24th 2024
 
 ---
 <style scoped>section { font-size: 20px; }</style>

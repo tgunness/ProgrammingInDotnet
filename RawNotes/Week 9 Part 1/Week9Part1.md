@@ -11,22 +11,6 @@ img[alt~="center"] {
 #### by Prof. Trishan Gunness 
 ---
 # Announcements  
-
-- Assignment Lab 3 due <span style="color:red;">March 24th 2024 11:59pm</span>
-
----
-<style scoped>section { font-size: 25px; }</style>
-# Recap:
-- Week 1- Introduced .NET & Visual Studio
-- Week 2 - Introduced C# Language
-- Week 3 - Introduced Lists and LINQ
-- Week 4 - OOP Fundamentals - Classes and Objects
-- Week 5 - OOP Fundamentals - Relationships
-- Week 6 - GUI - Forms and Events
-- Week 7 - Midterm
-- Week 8 Part 1 - Strings, Characters, Files & Streams, Serialization
-- Week 8 Part 2 - Gaming I
-- **Week 9 Part 1 - Serialization, Classes File and Directory, Searching and Sorting**
 ---
 
 # Today

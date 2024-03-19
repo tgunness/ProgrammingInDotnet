@@ -11,26 +11,6 @@ img[alt~="center"] {
 #### by Prof. Trishan Gunness 
 ---
 # Announcements  
-
-- Assignment Lab 4 due **March 31st 2024 11:59pm**
-- Assignment Lab 5 due **April 14th 2024 11:59pm (no late days)**
-  - See ["How to upload your game to Canvas"](https://www.youtube.com/watch?v=PNpVoE8w2r8)
----
-<style scoped>section { font-size: 25px; }</style>
-# Recap:
-- Week 1- Introduced .NET & Visual Studio
-- Week 2 - Introduced C# Language
-- Week 3 - Introduced Lists and LINQ
-- Week 4 - OOP Fundamentals - Classes and Objects
-- Week 5 - OOP Fundamentals - Relationships
-- Week 6 - GUI - Forms and Events
-- Week 7 - Midterm
-- Week 8 Part 1 - Strings, Characters, Files & Streams, Serialization
-- Week 8 Part 2 - Gaming I
-- Week 9 Part 1 - Serialization, Classes File and Directory, Searching and Sorting
-- Week 9 Part 2 - Gaming II
-- Week 10 Part 1 - Generics
-- **Week 11 - Databases**
 ---
 
 # Today

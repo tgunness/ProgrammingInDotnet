@@ -106,10 +106,11 @@ img[alt~="center"] {
 
 # Exercise
 [`List` Exercise](https://github.com/tgunness/ProgrammingInDotnet/blob/main/Exercises/Week%203/LISTWeeklyExercise.md)
+
 ---
 
 # Lab 1 - Working Session and Code Review
 
-The remainder of class will be used for working on Lab 1.
+---
 
-I can review the code you have thus far and provide feedback that may help you improve the grade on the assignment.
+# END
