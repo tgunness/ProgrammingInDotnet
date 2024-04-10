@@ -1,0 +1,7 @@
+C:\MohawkWorkspace\ProgrammingInDotnet\InClassDemoAndExercises\MockExam\MyMockSolution\MyMockSolution\bin\Debug\MyMockSolution.exe.config
+C:\MohawkWorkspace\ProgrammingInDotnet\InClassDemoAndExercises\MockExam\MyMockSolution\MyMockSolution\bin\Debug\MyMockSolution.exe
+C:\MohawkWorkspace\ProgrammingInDotnet\InClassDemoAndExercises\MockExam\MyMockSolution\MyMockSolution\bin\Debug\MyMockSolution.pdb
+C:\MohawkWorkspace\ProgrammingInDotnet\InClassDemoAndExercises\MockExam\MyMockSolution\MyMockSolution\obj\Debug\MyMockSolution.csproj.AssemblyReference.cache
+C:\MohawkWorkspace\ProgrammingInDotnet\InClassDemoAndExercises\MockExam\MyMockSolution\MyMockSolution\obj\Debug\MyMockSolution.csproj.CoreCompileInputs.cache
+C:\MohawkWorkspace\ProgrammingInDotnet\InClassDemoAndExercises\MockExam\MyMockSolution\MyMockSolution\obj\Debug\MyMockSolution.exe
+C:\MohawkWorkspace\ProgrammingInDotnet\InClassDemoAndExercises\MockExam\MyMockSolution\MyMockSolution\obj\Debug\MyMockSolution.pdb
